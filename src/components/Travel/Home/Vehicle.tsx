@@ -1,64 +1,96 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Col, Input, Row, Tooltip, Form, Card, Tag, Space, Radio, message, FormListFieldData, InputNumber } from 'antd';
+import { Col, Input, Row, Tooltip, Form, Card, Tag, Space, Radio, message, FormListFieldData, InputNumber, Image } from 'antd';
 import { Button } from '@app/components/common/buttons/Button/Button';
 import { CheckBox } from '@app/components/header/components/searchDropdown/searchOverlay/SearchFilter/SearchFilter.styles';
 import { Rating } from '@app/components/medical-dashboard/favoriteDoctors/DoctorCard/DoctorCard.styles';
+import Title from 'antd/lib/skeleton/Title';
+import { RightButtons } from '@app/pages/uiComponentsPages/modals/PopoversPage';
 
 const Vehicle: React.FC = () => {
   return (
     <Row gutter={[30, 30]}>
-      <Col span={24}>
+      <Col span={24}><h2>Vehicles</h2></Col>
+      <Col span={12}>
         <Card>
-          <h2>Sort By</h2>
-          <Radio.Group defaultValue={1} style={{ display: 'flex', flexDirection: 'column' }}>
-            <Radio value={1}>Default</Radio>
-            <Radio value={2}>Highest Price</Radio>
-            <Radio value={3}>Lowest Price</Radio>
-            <Radio value={4}>Highest Rating</Radio>
-            <Radio value={5}>Earliest departure time</Radio>
-          </Radio.Group>
-        </Card>
-      </Col>
-
-      <Col span={24}>
-        <Card>
-          <Row gutter={[30, 30]}>
-            <Col span={24}>
-              <h3>Time</h3>
-              <Row gutter={[20, 20]}>
-                <Col span={12}>
-                  <Button type="ghost">00:00 - 06:00</Button>
-                </Col>
-                <Col span={12}>
-                  <Button type="ghost">06:01 - 12:00</Button>
-                </Col>
-                <Col span={12}>
-                  <Button type="ghost">12:01 - 18:00</Button>
-                </Col>
-                <Col span={12}>
-                  <Button type="ghost">18:01 - 23:59</Button>
-                </Col>
-              </Row>
+          <h3>Express</h3>
+          <Row gutter={10}>
+            <Col className="gutter-row" span={12}>
+              <Image src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
             </Col>
-            <Col span={24}>
-              <h3>Type Bus</h3>
-              <CheckBox.Group style={{ display: 'flex', flexDirection: 'column' }}>
-                <CheckBox value={1}>Express</CheckBox>
-                <CheckBox value={2}>Luxury</CheckBox>
-                <CheckBox value={3}>Vovol(non A/C)</CheckBox>
-                <CheckBox value={4}>Vocol (A/C)</CheckBox>
-              </CheckBox.Group>
+            <Col className="gutter-row" span={12}>
+              <h4>Express</h4>
+              <p>7 Seats</p>
+              <p>The three parts of this practice Reading test are presented over three separate web pages. </p>
+              <p>100/100</p>
             </Col>
-
-            <Col span={24}>
-              <h3>Rating</h3>
-              <span>
-                <Rating value={3} /> 3
-              </span>
-            </Col>
+          </Row>
+          <Row>
+            <Button type="primary">More</Button>
           </Row>
         </Card>
       </Col>
+
+      <Col span={12}>
+        <Card>
+          <h3>Luxury</h3>
+          <Row gutter={10}>
+            <Col className="gutter-row" span={12}>
+              <Image src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
+            </Col>
+            <Col className="gutter-row" span={12}>
+              <h4>Luxury</h4>
+              <p>24 Seats</p>
+              <p>The three parts of this practice Reading test are presented over three separate web pages. </p>
+              <p>100/100</p>
+            </Col>
+          </Row>
+          <Row>
+            <Button type="primary">More</Button>
+          </Row>
+        </Card>
+      </Col>
+
+      <Col span={12}>
+        <Card>
+          <h3>Volvo (non A/C)</h3>
+          <Row gutter={10}>
+            <Col className="gutter-row" span={12}>
+              <Image src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
+            </Col>
+            <Col className="gutter-row" span={12}>
+              <h4>Volvo (non A/C)</h4>
+              <p>45 Seats</p>
+              <p>The three parts of this practice Reading test are presented over three separate web pages. </p>
+              <p>100/100</p>
+            </Col>
+          </Row>
+          <Row>
+            <Button type="primary">More</Button>
+          </Row>
+        </Card>
+      </Col>
+
+      <Col span={12}>
+        <Card>
+          <h3>Volco A/C</h3>
+          <Row gutter={10}>
+            <Col className="gutter-row" span={12}>
+              <Image src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
+            </Col>
+            <Col className="gutter-row" span={12}>
+              <h4>Volvo A/C</h4>
+              <p>45 Seats</p>
+              <p>The three parts of this practice Reading test are presented over three separate web pages. </p>
+              <p>100/100</p>
+            </Col>
+          </Row>
+          <Row>
+            <Button type="primary">More</Button>
+          </Row>
+        </Card>
+      </Col>
+
+      
     </Row>
   );
 };

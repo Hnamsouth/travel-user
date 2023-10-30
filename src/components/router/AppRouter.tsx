@@ -22,6 +22,8 @@ import FindTicket from '../Travel/Home/FindTicket';
 import YourProfile from '../Travel/Home/YourProfile';
 import VovolAC from '../Travel/Home/Vehicles/VovolAC';
 import Express from '../Travel/Home/Vehicles/Express';
+import VovolnonAC from '../Travel/Home/Vehicles/VovolnonAC';
+import Luxury from '../Travel/Home/Vehicles/Luxury';
 
 const NewsFeedPage = React.lazy(() => import('@app/pages/NewsFeedPage'));
 const KanbanPage = React.lazy(() => import('@app/pages/KanbanPage'));
@@ -142,14 +144,16 @@ export const AppRouter: React.FC = () => {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="vehicle" element={<Vehicle />}>
-            <Route path="express" element={<Express />} />
+            {/* <Route path="express" element={<Express />} /> */}
             <Route path="vovolAC" element={<VovolAC />} />
-            <Route path="vovolAC" element={<VovolAC />} />
-            <Route path="vovolAC" element={<VovolAC />} />
+            <Route path="vovolnonAC" element={<VovolnonAC />} />
+            <Route path="luxury" element={<Luxury />} />
           </Route>
           <Route path="schedule" element={<Schedule />} />
           <Route path="findticket" element={<FindTicket />} />
           <Route path="yourprofile" element={<YourProfile />} />
+
+          <Route path="express" element={<Express />} />
         </Route>
 
         <Route path="/user" element={protectedLayout}>
