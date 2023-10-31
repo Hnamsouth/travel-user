@@ -1,65 +1,60 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Col, Input, Row, Tooltip, Form, Card, Tag, Space, Radio, message, FormListFieldData, InputNumber } from 'antd';
+import { Col, Input, Row, Tooltip, Form, Tag, Space, Radio, message, FormListFieldData, InputNumber } from 'antd';
 import { Button } from '@app/components/common/buttons/Button/Button';
 import { CheckBox } from '@app/components/header/components/searchDropdown/searchOverlay/SearchFilter/SearchFilter.styles';
 import { Rating } from '@app/components/medical-dashboard/favoriteDoctors/DoctorCard/DoctorCard.styles';
+import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
+import { Card } from '@app/components/common/Card/Card';
+import { ProfileInfo } from '@app/components/profile/profileCard/ProfileInfo/ProfileInfo';
+import { ProfileNav } from '@app/components/profile/profileCard/ProfileNav/ProfileNav';
+import { useResponsive } from '@app/hooks/useResponsive';
+import { useAppSelector } from '@app/hooks/reduxHooks';
+import { useTranslation } from 'react-i18next';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const Vehicle: React.FC = () => {
+  const user = useAppSelector((state) => state.user.user);
+
+  const { t } = useTranslation();
+  const { isTablet: isTabletOrHigher, mobileOnly } = useResponsive();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const { isTablet } = useResponsive();
+
+  const isTitleShown = isTabletOrHigher || (mobileOnly && location.pathname === '/profile');
+  const isMenuShown = isTabletOrHigher || (mobileOnly && location.pathname !== '/profile');
   return (
-    <Row gutter={[30, 30]}>
-      <Col span={24}>
-        <Card>
-          <h2>Sort By</h2>
-          <Radio.Group defaultValue={1} style={{ display: 'flex', flexDirection: 'column' }}>
-            <Radio value={1}>Default</Radio>
-            <Radio value={2}>Highest Price</Radio>
-            <Radio value={3}>Lowest Price</Radio>
-            <Radio value={4}>Highest Rating</Radio>
-            <Radio value={5}>Earliest departure time</Radio>
-          </Radio.Group>
-        </Card>
-      </Col>
-
-      <Col span={24}>
-        <Card>
-          <Row gutter={[30, 30]}>
-            <Col span={24}>
-              <h3>Time</h3>
-              <Row gutter={[20, 20]}>
-                <Col span={12}>
-                  <Button type="ghost">00:00 - 06:00</Button>
-                </Col>
-                <Col span={12}>
-                  <Button type="ghost">06:01 - 12:00</Button>
-                </Col>
-                <Col span={12}>
-                  <Button type="ghost">12:01 - 18:00</Button>
-                </Col>
-                <Col span={12}>
-                  <Button type="ghost">18:01 - 23:59</Button>
-                </Col>
-              </Row>
-            </Col>
-            <Col span={24}>
-              <h3>Type Bus</h3>
-              <CheckBox.Group style={{ display: 'flex', flexDirection: 'column' }}>
-                <CheckBox value={1}>Express</CheckBox>
-                <CheckBox value={2}>Luxury</CheckBox>
-                <CheckBox value={3}>Vovol(non A/C)</CheckBox>
-                <CheckBox value={4}>Vocol (A/C)</CheckBox>
-              </CheckBox.Group>
-            </Col>
-
-            <Col span={24}>
-              <h3>Rating</h3>
-              <span>
-                <Rating value={3} /> 3
-              </span>
-            </Col>
-          </Row>
-        </Card>
-      </Col>
-    </Row>
+    <>
+      <Row gutter={[30, 30]}>
+        {isTitleShown && (
+          <Col xs={24} md={24} xl={8}>
+            <Card>
+              <h2>Vehicle list</h2>
+              <Radio.Group defaultValue={1} style={{ display: 'flex', flexDirection: 'column' }}>
+                <Radio value={1}>
+                  <a href="/vehicle/express">Express</a>
+                </Radio>
+                <Radio value={2}>
+                  <a href="/vehicle/express">Luxury</a>
+                </Radio>
+                <Radio value={3}>
+                  <a href="/vehicle/express">VovolAC</a>
+                </Radio>
+                <Radio value={4}>
+                  <a href="/vehicle/express">VovolnonAC</a>
+                </Radio>
+              </Radio.Group>
+            </Card>
+          </Col>
+        )}
+        {isMenuShown && (
+          <Col xs={24} md={24} xl={16}>
+            <Outlet />
+          </Col>
+        )}
+      </Row>
+    </>
   );
 };
 export default Vehicle;

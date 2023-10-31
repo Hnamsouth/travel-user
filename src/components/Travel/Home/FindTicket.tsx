@@ -1,4 +1,8 @@
 const FindTicket: React.FC = () => {
-  return <p>FindTicket</p>;
+  return (
+    <div>
+      <p>FindTicket</p>
+    </div>
+  );
 };
 export default FindTicket;

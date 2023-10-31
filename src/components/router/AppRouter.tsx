@@ -22,6 +22,8 @@ import FindTicket from '../Travel/Home/FindTicket';
 import YourProfile from '../Travel/Home/YourProfile';
 import VovolAC from '../Travel/Home/Vehicles/VovolAC';
 import Express from '../Travel/Home/Vehicles/Express';
+import VovolnonAC from '../Travel/Home/Vehicles/VovolnonAC';
+import Luxury from '../Travel/Home/Vehicles/Luxury';
 
 const NewsFeedPage = React.lazy(() => import('@app/pages/NewsFeedPage'));
 const KanbanPage = React.lazy(() => import('@app/pages/KanbanPage'));
@@ -141,23 +143,21 @@ export const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="schedule" element={<Schedule />} />
+          <Route path="findticket" element={<FindTicket />} />
           <Route path="vehicle" element={<Vehicle />}>
             <Route path="express" element={<Express />} />
             <Route path="vovolAC" element={<VovolAC />} />
-            <Route path="vovolAC" element={<VovolAC />} />
-            <Route path="vovolAC" element={<VovolAC />} />
+            <Route path="vovolnonAC" element={<VovolnonAC />} />
+            <Route path="luxury" element={<Luxury />} />
           </Route>
-          <Route path="schedule" element={<Schedule />} />
-          <Route path="findticket" element={<FindTicket />} />
-          <Route path="yourprofile" element={<YourProfile />} />
-        </Route>
-
-        <Route path="/user" element={protectedLayout}>
-          <Route path="profile" element={<ProfileLayout />}>
-            <Route path="personal-info" element={<PersonalInfo />} />
-            <Route path="security-settings" element={<SecuritySettings />} />
-            <Route path="notifications" element={<Notifications />} />
-            <Route path="payments" element={<Payments />} />
+          <Route path="user">
+            <Route path="profile" element={<ProfileLayout />}>
+              <Route path="personal-info" element={<PersonalInfo />} />
+              <Route path="security-settings" element={<SecuritySettings />} />
+              <Route path="notifications" element={<Notifications />} />
+              <Route path="payments" element={<Payments />} />
+            </Route>
           </Route>
         </Route>
 

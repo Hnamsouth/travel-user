@@ -47,14 +47,56 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
   {
     title: 'common.vehicle',
     key: 'vehicle',
-    url: '/vehicle',
     icon: <CarOutlined />,
+    children: [
+      {
+        title: 'common.express',
+        key: 'express',
+        url: '/vehicle/express',
+      },
+      {
+        title: 'common.luxury',
+        key: 'luxury',
+        url: '/vehicle/luxury',
+      },
+      {
+        title: 'common.vovolac',
+        key: 'vovolac',
+        url: '/vehicle/vovolac',
+      },
+      {
+        title: 'common.vovolnonac',
+        key: 'vovolnonac',
+        url: '/vehicle/vovolnonac',
+      },
+    ],
   },
   {
-    title: 'common.yourprofile',
-    key: 'yourprofile',
-    url: '/yourprofile',
+    title: 'common.user',
+    key: 'user',
     icon: <QqOutlined />,
+    children: [
+      {
+        title: 'common.personal-info',
+        key: 'personal-info',
+        url: 'user/profile/personal-info',
+      },
+      {
+        title: 'common.security-settings',
+        key: 'security-settings',
+        url: 'user/profile/security-settings',
+      },
+      {
+        title: 'common.notifications',
+        key: 'notifications',
+        url: 'user/profile/notifications',
+      },
+      {
+        title: 'common.payments',
+        key: 'payments',
+        url: 'user/profile/payments',
+      },
+    ],
   },
   //nav end from here
   {

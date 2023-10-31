@@ -128,6 +128,18 @@
         "schedule":"Schedule",
         "findticket":"Find Ticket",
         "yourprofile":"Your Profile",
+
+        "user":"User",
+        "personal-info":"Personal info",
+        "security-settings":"Security settings",
+        "notifications":"Notification",
+        "payments":"Payments",
+
+        "express":"Express",
+        "luxury":"Luxury",
+        "vovolac":"VovolAC",
+        "vovolnonac":"VovolNoAC",
+        
         "address": "Address",
         "advancedForms": "Advanced Forms",
         "age": "Age",

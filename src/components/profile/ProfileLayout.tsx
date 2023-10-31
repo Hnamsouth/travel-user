@@ -55,7 +55,7 @@ const ProfileLayout: React.FC = () => {
             </ProfileCard>
           </Col>
         )}
-
+        {/* this will show the child components */}
         {isMenuShown && (
           <Col xs={24} md={24} xl={16}>
             <Outlet />
