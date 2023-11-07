@@ -1,17 +1,18 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Col, Row } from 'antd';
-import Slider from 'react-slick';
-import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import { Carousel } from '@app/components/common/Carousel/Carousel';
-import { ViewAll } from '@app/components/nft-dashboard/common/ViewAll/ViewAll';
-import { NFTCardHeader } from '@app/components/nft-dashboard/common/NFTCardHeader/NFTCardHeader';
-import { TrendingCollection } from '@app/components/nft-dashboard/trending-collections/collection/TrendingCollection';
-import { useResponsive } from '@app/hooks/useResponsive';
-import { getTrendingActivities, TrendingActivity } from '@app/api/activity.api';
-import * as S from './TrendingCollections.styles';
-import { GetRouteData, TravelRoute } from '@app/api/main/route.api';
-import { useMounted } from '@app/hooks/useMounted';
+// eslint-disable-next-line prettier/prettier
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Col, Row } from "antd";
+import Slider from "react-slick";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { Carousel } from "@app/components/common/Carousel/Carousel";
+import { ViewAll } from "@app/components/nft-dashboard/common/ViewAll/ViewAll";
+import { NFTCardHeader } from "@app/components/nft-dashboard/common/NFTCardHeader/NFTCardHeader";
+import { TrendingCollection } from "@app/components/nft-dashboard/trending-collections/collection/TrendingCollection";
+import { useResponsive } from "@app/hooks/useResponsive";
+// import { getTrendingActivities, TrendingActivity } from '@app/api/activity.api';
+import * as S from "./TrendingCollections.styles";
+import { GetRouteData, TravelRoute } from "@app/api/main/route.api";
+import { useMounted } from "@app/hooks/useMounted";
 
 export const TrendingCollections: React.FC = () => {
   const [travelRoute, SetTraverRoute] = useState<TravelRoute[]>([]);
@@ -21,10 +22,10 @@ export const TrendingCollections: React.FC = () => {
   const fetchData = async () => {
     await GetRouteData("travel-popular").then((res) => {
       if (isMounted) {
-        SetTraverRoute(res)
+        SetTraverRoute(res);
       }
-    })
-  }
+    });
+  };
 
   useEffect(() => {
     fetchData();
@@ -41,7 +42,7 @@ export const TrendingCollections: React.FC = () => {
             <TrendingCollection data={item} />
           </S.CardWrapper>
         </div>
-      )),
+      ))
     };
   }, [travelRoute]);
 
@@ -59,13 +60,13 @@ export const TrendingCollections: React.FC = () => {
 
             <Col>
               <S.ArrowBtn type="text" size="small" onClick={() => sliderRef.current && sliderRef.current.slickPrev()}>
-                <LeftOutlined />
+                <LeftOutlined rev={undefined} />
               </S.ArrowBtn>
             </Col>
 
             <Col>
               <S.ArrowBtn type="text" size="small" onClick={() => sliderRef.current && sliderRef.current.slickNext()}>
-                <RightOutlined />
+                <RightOutlined rev={undefined} />
               </S.ArrowBtn>
             </Col>
           </Row>
@@ -83,9 +84,9 @@ export const TrendingCollections: React.FC = () => {
               {
                 breakpoint: 1900,
                 settings: {
-                  slidesToShow: 2,
-                },
-              },
+                  slidesToShow: 2
+                }
+              }
             ]}
           >
             {travelRouteList.tablet}
