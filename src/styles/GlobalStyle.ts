@@ -62,6 +62,11 @@ export default createGlobalStyle`
   .d-none {
     display: none;
   }
+  .card-asd {
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+  }
 
   .ant-picker-cell {
     color: var(--text-main-color);

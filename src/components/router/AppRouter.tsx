@@ -16,13 +16,6 @@ import RequireAuth from '@app/components/router/RequireAuth';
 import { withLoading } from '@app/hocs/withLoading.hoc';
 import NftDashboardPage from '@app/pages/DashboardPages/NftDashboardPage';
 import MedicalDashboardPage from '@app/pages/DashboardPages/MedicalDashboardPage';
-import Vehicle from '../Travel/Home/Vehicle';
-import Schedule from '../Travel/Home/Schedule';
-import FindTicket from '../Travel/Home/FindTicket';
-import YourProfile from '../Travel/Home/YourProfile';
-import VovolAC from '../Travel/Home/Vehicles/VovolAC';
-import Express from '../Travel/Home/Vehicles/Express';
-import AboutUs from "@app/components/Travel/Home/AboutUs";
 
 const NewsFeedPage = React.lazy(() => import('@app/pages/NewsFeedPage'));
 const KanbanPage = React.lazy(() => import('@app/pages/KanbanPage'));
@@ -68,6 +61,9 @@ const ReactSimpleMaps = React.lazy(() => import('@app/pages/maps/ReactSimpleMaps
 const PigeonsMaps = React.lazy(() => import('@app/pages/maps/PigeonsMapsPage/PigeonsMapsPage'));
 const Logout = React.lazy(() => import('./Logout'));
 const HomePage = React.lazy(() => import('@app/pages/Travel/HomePage'));
+const PaymentHistoryPage = React.lazy(() => import('@app/pages/Travel/UserProfile/PaymentHistoryPage'));
+
+
 
 export const NFT_DASHBOARD_PATH = '/';
 export const MEDICAL_DASHBOARD_PATH = '/medical-dashboard';
@@ -127,8 +123,9 @@ const Payments = withLoading(PaymentsPage);
 
 const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
+const Payment = withLoading(PaymentHistoryPage);
 
-const Home = withLoading(HomePage);
+const Home = withLoading(HomePage)
 
 export const AppRouter: React.FC = () => {
   const protectedLayout = (
@@ -140,32 +137,25 @@ export const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
+        <Route path='/' element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="vehicle" element={<Vehicle />}>
-            <Route path="express" element={<Express />} />
-            <Route path="vovolAC" element={<VovolAC />} />
-            <Route path="vovolAC" element={<VovolAC />} />
-            <Route path="vovolAC" element={<VovolAC />} />
-          </Route>
-          <Route path="schedule" element={<Schedule />} />
-          <Route path="findticket" element={<FindTicket />} />
-          <Route path="yourprofile" element={<YourProfile />} />
-          <Route path="about-us" element={<AboutUs />} />
+          <Route path='/checkout/:id' element={<Payment />} />
         </Route>
 
-        <Route path="/user" element={protectedLayout}>
+        <Route path='/user' element={protectedLayout}>
           <Route path="profile" element={<ProfileLayout />}>
             <Route path="personal-info" element={<PersonalInfo />} />
             <Route path="security-settings" element={<SecuritySettings />} />
             <Route path="notifications" element={<Notifications />} />
-            <Route path="payments" element={<Payments />} />
           </Route>
+          <Route path="checkout/:id" element={<Payment />} />
         </Route>
 
+
+
         <Route path={NFT_DASHBOARD_PATH} element={protectedLayout}>
-          <Route path="ntf" element={<NftDashboard />} />
-          <Route path={MEDICAL_DASHBOARD_PATH} element={<MedicalDashboard />} />
+          <Route path='ntf' element={<NftDashboard />} />
+          <Route path={"medical-dashboard"} element={<MedicalDashboard />} />
           <Route path="apps">
             <Route path="feed" element={<NewsFeed />} />
             <Route path="kanban" element={<Kanban />} />

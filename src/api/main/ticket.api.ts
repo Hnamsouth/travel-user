@@ -20,6 +20,7 @@ export interface Tickets {
     "createAt": string,
     "departureDate": string,
     "email": string,
+    "total":number,
     "paypalOrderId": string | null,
     "price": number | null,
     "idTravelRoute": number,
@@ -50,7 +51,7 @@ export interface PriceForAge {
 export interface TKDTdata {
     seat: string, 
     ownerName: string, 
-    ownerAge: number, 
+    ownerAge: number | null, 
     key: number, 
     price: number | string,
     id:number|0,
@@ -81,7 +82,8 @@ export const getTicketTableData = (pagination: Pagination): Promise<TableData<Ti
     });
 };
 
-export const getPriceForAgeData = async ():Promise<PriceForAge[]> => httpApi.get<PriceForAge[]>('ticket/get-data?type=pfa').then((res)=>res.data);
-
-export const CreateTicket = async (data:CreateTicketInfo):Promise<Tickets>=>httpApi.post<Tickets>('ticket/create',data).then((res)=>res.data);
-export const EditTicket = async (data:Tickets):Promise<Tickets>=>httpApi.put<Tickets>('ticket/edit',data).then((res)=>res.data);
+export const getPriceForAgeData = async ():Promise<PriceForAge[]> => httpApi.get<PriceForAge[]>('ticket/get-data?type=pfa').then((res)=>res.data).catch((err)=>err);
+export const CreateTicket = async (data:CreateTicketInfo):Promise<Tickets>=>httpApi.post<Tickets>('ticket/create',data).then((res)=>res.data).catch((err)=>err);
+export const EditTicket = async (data:Tickets):Promise<Tickets>=>httpApi.put<Tickets>('ticket/edit',data).then((res)=>res.data).catch((err)=>err);
+export const getTicketById = (id:string):Promise<Tickets> =>httpApi.get(`ticket/get-data?type=${id}`).then((res)=>res.data).catch((err)=>err);
+export const EditTicketDetail =async (data:TicketDetail):Promise<TicketDetail> => httpApi.put<TicketDetail>("ticket/edit-tkdt",data).then((res)=>res.data).catch(err=>err);

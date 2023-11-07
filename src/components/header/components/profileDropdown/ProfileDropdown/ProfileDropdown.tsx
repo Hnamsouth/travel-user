@@ -26,7 +26,7 @@ export const ProfileDropdown: React.FC = () => {
         </Col>
         {isTablet && (
           <Col>
-            <H6>{`${user.name}`}</H6>
+            <H6 style={{color:"white"}} >{`${user.name}`}</H6>
           </Col>
         )}
       </S.ProfileDropdownHeader>

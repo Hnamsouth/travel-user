@@ -43,7 +43,7 @@ export interface BusStructure {
   "col": number,
   "idTypeBus": number,
   "idTypeBusNavigation": TypeBus | null,
-  "seatStructures":SeatStructure[]| []
+  "seatStructures": SeatStructure[] | []
 }
 export interface SeatStructure {
   "id": number,
@@ -73,10 +73,14 @@ export interface DeleteType {
   id: number
 }
 
+export interface Seat {
+  seat: string,
+  status: number
+}
 
 export interface BusStructureData {
   busStructure: BusStructure;
-  seat: string[];
+  seat: Seat[];
 }
 
 
@@ -104,7 +108,7 @@ export const getSeatStructureData = (pagination: Pagination): Promise<TableData<
     }, 100);
   });
 };
-export const CreateSeatStructure =  async (data: SeatStructure[]): Promise<any> => await httpApi.post("bus/seat-stt-create", data).then((res) => res.data);
+export const CreateSeatStructure = async (data: SeatStructure[]): Promise<any> => await httpApi.post("bus/seat-stt-create", data).then((res) => res.data);
 
 
 export const getTypeBusTypeSeatData = async (pagination: Pagination): Promise<TableData<TypeBus_TypeSeat>> => {
@@ -118,10 +122,13 @@ export const getBusStructureTableData = async (pagination: Pagination): Promise<
   return new Promise((res) => res({ data: rs.data, pagination: { ...pagination, total: 16 }, }));
 };
 
-export const GetBusStructureData =  async (idTypebus: number,idTravelRoute:number): Promise<BusStructureData> => await httpApi.get<BusStructureData>(`bus/get-bus-stt?idTypeBus=${idTypebus}&idTravelRoute=${idTravelRoute}`).then((res) => res.data);
+export const getBusSttByTypeBus = async (id: number): Promise<BusStructure> => httpApi(`bus/get-data?type=bus-stt&id=${id}`).then((res) => res.data).catch(err => err);
+
+export const GetBusStructureData = async ( idTravelRoute: number): Promise<BusStructureData> => await httpApi.get<BusStructureData>(`bus/get-bus-stt?idTravelRoute=${idTravelRoute}`).then((res) => res.data);
 export const CreateBusStructure = async (data: BusStructure): Promise<BusStructure> => await httpApi.post("bus/bus-stt-create", data).then((res) => res.data);
 export const EditBusStructure = async (data: BusStructure): Promise<boolean> => await httpApi.put("bus/bus-stt-edit", data).then((res) => res.data);
 
+export const GetSeatSelected = async (idTravelRoute: number): Promise<Seat[]> => await httpApi.get<Seat[]>(`bus/get-seat-selected?idTravelRoute=${idTravelRoute}`).then((res) => res.data);
 
 /// bus list
 export const getBusesTableData = async (pagination: Pagination): Promise<TableData<Buss>> => {

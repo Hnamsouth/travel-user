@@ -25,8 +25,15 @@
     },
     "page":{
         "home":{
-            "btn":{
-                "addReturnDate":"Add Return Date"
+            "searchSchedule":{
+                "from":"Start point",
+                "to":"Destination",
+                "departureDate":"Departure Date",
+                "returnDate":"Add Return Date",
+                "search":"Search"
+            },
+            "popularRoute":{
+                "title":"Popular bus routes"
             },
             "tooltip":{
                 "removeReturnDate":"Remove Return Date"
@@ -285,7 +292,9 @@
             "to":"To",
             "distance": "Distance",
             "time": "Time",
-            "price":"Price"
+            "price":"Price",
+            "book": "Book",
+            "close":"Close"
         },
         "routeDetail": "Route Detail",
         "preview": "Preview",
@@ -294,7 +303,11 @@
             "title":"Tickets",
             "list":"Ticket List",
             "detail":{
-                "title":"Ticket Detail"
+                "title":"Ticket Detail",
+                "name":"Name",
+                "age":"Age",
+                "seat":"Seat",
+                "price":"Price"
             },
             "refund":{
                 "title":"Refunded Tickets"
@@ -677,7 +690,8 @@
         "warning": "Warning",
         "warningDescription": "Warning description",
         "warningTitle": "Warning text",
-        "withoutDescription": "Notifications without description"
+        "withoutDescription": "Notifications without description",
+        "paymentMethodRequired":"Please choose payment method"
     },
     "popconfirm": {
         "async": "Asynchronously close",
@@ -999,6 +1013,11 @@
         "trendingCollections": "Trending Collections",
         "recentlyAddedNFTs": "Recently Added NFTs",
         "trendingCreators": "Trending Creators"
+    },
+    "payment":{
+        "title":"Payment",
+        "viewOrder":"Go Order",
+        "titlests":"Payment Successful.",
+        "subtitle":"The ticket information will be sent to your email.Thanks"
     }
-
 }

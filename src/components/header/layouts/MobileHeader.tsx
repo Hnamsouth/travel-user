@@ -10,10 +10,10 @@ interface MobileHeaderProps {
   toggleSider: () => void;
   isSiderOpened: boolean;
 }
-
+const backgroundColor= "#0064C0";
 export const MobileHeader: React.FC<MobileHeaderProps> = ({ toggleSider, isSiderOpened }) => {
   return (
-    <Row justify="space-between" align="middle">
+    <Row justify="space-between" align="middle"  style={{background:backgroundColor}} >
       <Col>
         <ProfileDropdown />
       </Col>
