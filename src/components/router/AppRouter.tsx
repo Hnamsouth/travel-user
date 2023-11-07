@@ -22,6 +22,7 @@ import FindTicket from '../Travel/Home/FindTicket';
 import YourProfile from '../Travel/Home/YourProfile';
 import VovolAC from '../Travel/Home/Vehicles/VovolAC';
 import Express from '../Travel/Home/Vehicles/Express';
+import AboutUs from "@app/components/Travel/Home/AboutUs";
 
 const NewsFeedPage = React.lazy(() => import('@app/pages/NewsFeedPage'));
 const KanbanPage = React.lazy(() => import('@app/pages/KanbanPage'));
@@ -150,6 +151,7 @@ export const AppRouter: React.FC = () => {
           <Route path="schedule" element={<Schedule />} />
           <Route path="findticket" element={<FindTicket />} />
           <Route path="yourprofile" element={<YourProfile />} />
+          <Route path="about-us" element={<AboutUs />} />
         </Route>
 
         <Route path="/user" element={protectedLayout}>

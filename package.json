@@ -11,7 +11,7 @@
     "url": "https://github.com/altence/lightence-admin/issues"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
+    "@ant-design/icons": "^5.2.6",
     "@craco/craco": "^6.1.2",
     "@paypal/react-paypal-js": "^8.1.3",
     "@react-oauth/google": "latest",
