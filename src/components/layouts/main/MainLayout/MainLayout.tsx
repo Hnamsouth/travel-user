@@ -8,11 +8,12 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { MEDICAL_DASHBOARD_PATH, NFT_DASHBOARD_PATH } from '@app/components/router/AppRouter';
 import { useResponsive } from '@app/hooks/useResponsive';
 import { References } from '@app/components/common/References/References';
+import { Col, Row } from 'antd';
 
 const MainLayout: React.FC = () => {
   const [isTwoColumnsLayout, setIsTwoColumnsLayout] = useState(true);
   const [siderCollapsed, setSiderCollapsed] = useState(false);
-  const { isTablet } = useResponsive();
+  const { isTablet, isDesktop } = useResponsive();
   const location = useLocation();
 
   const toggleSider = () => setSiderCollapsed(!siderCollapsed);
@@ -21,16 +22,30 @@ const MainLayout: React.FC = () => {
     setIsTwoColumnsLayout([MEDICAL_DASHBOARD_PATH, NFT_DASHBOARD_PATH].includes(location.pathname) && isTablet);
   }, [location.pathname, isTablet]);
 
+
+  const backgroundColor= "#0064C0";
   return (
     <S.LayoutMaster>
-      <MainSider isCollapsed={siderCollapsed} setCollapsed={setSiderCollapsed} />
-      <S.LayoutMain>
-        <MainHeader isTwoColumnsLayout={isTwoColumnsLayout}>
-          <Header toggleSider={toggleSider} isSiderOpened={!siderCollapsed} isTwoColumnsLayout={isTwoColumnsLayout} />
+      {/* <MainSider isCollapsed={siderCollapsed} setCollapsed={setSiderCollapsed} /> */}
+      <S.LayoutMain >
+        <MainHeader isTwoColumnsLayout={isTwoColumnsLayout} >
+          <Header toggleSider={toggleSider} isSiderOpened={!siderCollapsed} isTwoColumnsLayout={isTwoColumnsLayout}/>
         </MainHeader>
         <MainContent id="main-content" $isTwoColumnsLayout={isTwoColumnsLayout}>
           <div>
-            <Outlet />
+            <Row align={"middle"}>
+
+              {isDesktop ? (
+                <Col span={18} offset={3}>
+                  <Outlet />
+                </Col>
+              ) : (
+                <Col span={24}>
+                  <Outlet />
+                </Col>
+              )}
+            </Row>
+
           </div>
           {!isTwoColumnsLayout && <References />}
         </MainContent>

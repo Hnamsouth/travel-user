@@ -61,6 +61,8 @@ const ReactSimpleMaps = React.lazy(() => import('@app/pages/maps/ReactSimpleMaps
 const PigeonsMaps = React.lazy(() => import('@app/pages/maps/PigeonsMapsPage/PigeonsMapsPage'));
 const Logout = React.lazy(() => import('./Logout'));
 const HomePage = React.lazy(() => import('@app/pages/Travel/HomePage'));
+const PaymentHistoryPage = React.lazy(() => import('@app/pages/Travel/UserProfile/PaymentHistoryPage'));
+
 
 
 export const NFT_DASHBOARD_PATH = '/';
@@ -121,6 +123,7 @@ const Payments = withLoading(PaymentsPage);
 
 const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
+const Payment = withLoading(PaymentHistoryPage);
 
 const Home = withLoading(HomePage)
 
@@ -136,6 +139,7 @@ export const AppRouter: React.FC = () => {
       <Routes>
         <Route path='/' element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path='/checkout/:id' element={<Payment />} />
         </Route>
 
         <Route path='/user' element={protectedLayout}>
@@ -143,14 +147,15 @@ export const AppRouter: React.FC = () => {
             <Route path="personal-info" element={<PersonalInfo />} />
             <Route path="security-settings" element={<SecuritySettings />} />
             <Route path="notifications" element={<Notifications />} />
-            <Route path="payments" element={<Payments />} />
           </Route>
+          <Route path="checkout/:id" element={<Payment />} />
         </Route>
+
 
 
         <Route path={NFT_DASHBOARD_PATH} element={protectedLayout}>
           <Route path='ntf' element={<NftDashboard />} />
-          <Route path={MEDICAL_DASHBOARD_PATH} element={<MedicalDashboard />} />
+          <Route path={"medical-dashboard"} element={<MedicalDashboard />} />
           <Route path="apps">
             <Route path="feed" element={<NewsFeed />} />
             <Route path="kanban" element={<Kanban />} />

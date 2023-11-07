@@ -4,26 +4,28 @@ import { Avatar } from '@app/components/common/Avatar/Avatar';
 import { formatNumberWithCommas, getCurrencyPrice } from '@app/utils/utils';
 import { TrendingActivity } from '@app/api/activity.api';
 import * as S from './TrendingCollection.styles';
+import { TravelRoute } from '@app/api/main/route.api';
+import { ArrowRightOutlined } from '@ant-design/icons';
 
-export const TrendingCollection: React.FC<TrendingActivity> = ({ title, owner, usd_value, image, avatar }) => {
+export const TrendingCollection: React.FC<{data:TravelRoute}> = (data) => {
   const { t } = useTranslation();
 
   return (
-    <S.Card padding={0} $img={image}>
-      <S.CollectionImage src={image} alt="nft" />
+    <S.Card padding={0} $img={"https://lightence-assets.s3.amazonaws.com/lightence-activity/milad-fakurian-bMSA5-tLFao-unsplash_js8utz.webp"}>
+      <S.CollectionImage src={"https://lightence-assets.s3.amazonaws.com/lightence-activity/milad-fakurian-bMSA5-tLFao-unsplash_js8utz.webp"} alt="nft" />
       <S.BidButton type="ghost">{t('nft.bid')}</S.BidButton>
       <S.NftCollectionInfo>
-        <S.AuthorAvatarWrapper>
+        {/* <S.AuthorAvatarWrapper>
           <Avatar shape="circle" size={64} src={avatar} alt={owner} />
-        </S.AuthorAvatarWrapper>
+        </S.AuthorAvatarWrapper> */}
         <S.InfoRow>
-          <S.Title level={5}>{title}</S.Title>
+          <S.Title level={5}>{data.data.idRouteNavigation?.idFromLocationNavigation?.name} <ArrowRightOutlined/> {data.data.idRouteNavigation?.idToLocationNavigation?.name}</S.Title>
         </S.InfoRow>
         <S.InfoRow>
           <S.OwnerText>
-            {t('nft.by')} {owner}
+            type {data.data.idBusScheduleNavigation?.idBusNavigation?.idTypeBusNavigation?.name}
           </S.OwnerText>
-          <S.USDText>{getCurrencyPrice(formatNumberWithCommas(usd_value), 'USD')}</S.USDText>
+          <S.USDText>{getCurrencyPrice(formatNumberWithCommas(((data.data.idRouteNavigation?.price as number)+(data.data.idBusScheduleNavigation?.idBusNavigation?.idTypeBusNavigation?.pricePlus as number))), 'USD')}</S.USDText>
         </S.InfoRow>
       </S.NftCollectionInfo>
     </S.Card>

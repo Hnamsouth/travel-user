@@ -10,34 +10,29 @@ import * as S from '../Header.styles';
 interface DesktopHeaderProps {
   isTwoColumnsLayout: boolean;
 }
+const backgroundColor= "#0064C0";
 
 export const DesktopHeader: React.FC<DesktopHeaderProps> = ({ isTwoColumnsLayout }) => {
   const leftSide = isTwoColumnsLayout ? (
     <S.SearchColumn xl={16} xxl={17}>
       <Row justify="space-between">
         <Col xl={15} xxl={12}>
-          <HeaderSearch />
+          {/* <HeaderSearch /> */}
         </Col>
-        {/* <Col>
-          <S.GHButton />
-        </Col> */}
       </Row>
     </S.SearchColumn>
   ) : (
     <>
       <Col lg={10} xxl={8}>
-        <HeaderSearch />
+        {/* <HeaderSearch />
+         */}
       </Col>
-      {/* <Col>
-        <S.GHButton />
-      </Col> */}
     </>
   );
 
   return (
-    <Row justify="space-between" align="middle">
+    <Row justify="space-between" align="middle" >
       {leftSide}
-
       <S.ProfileColumn xl={8} xxl={7} $isTwoColumnsLayout={isTwoColumnsLayout}>
         <Row align="middle" justify="end" gutter={[10, 10]}>
           <Col>

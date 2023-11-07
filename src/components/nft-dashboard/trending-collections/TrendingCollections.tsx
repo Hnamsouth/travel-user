@@ -10,36 +10,47 @@ import { TrendingCollection } from '@app/components/nft-dashboard/trending-colle
 import { useResponsive } from '@app/hooks/useResponsive';
 import { getTrendingActivities, TrendingActivity } from '@app/api/activity.api';
 import * as S from './TrendingCollections.styles';
+import { GetRouteData, TravelRoute } from '@app/api/main/route.api';
+import { useMounted } from '@app/hooks/useMounted';
 
 export const TrendingCollections: React.FC = () => {
-  const [trending, setTrending] = useState<TrendingActivity[]>([]);
-
+  const [travelRoute, SetTraverRoute] = useState<TravelRoute[]>([]);
   const { mobileOnly, isTablet: isTabletOrHigher } = useResponsive();
 
+  const { isMounted } = useMounted();
+  const fetchData = async () => {
+    await GetRouteData("travel-popular").then((res) => {
+      if (isMounted) {
+        SetTraverRoute(res)
+      }
+    })
+  }
+
   useEffect(() => {
-    getTrendingActivities().then((res) => setTrending(res));
+    fetchData();
   }, []);
 
   const { t } = useTranslation();
 
-  const trendingList = useMemo(() => {
+  const travelRouteList = useMemo(() => {
     return {
-      mobile: trending.map((item, index) => <TrendingCollection key={index} {...item} />).slice(0, 3),
-      tablet: trending.map((item, index) => (
+      mobile: travelRoute.map((item, index) => <TrendingCollection key={index} data={item} />).slice(0, 3),
+      tablet: travelRoute.map((item, index) => (
         <div key={index}>
           <S.CardWrapper>
-            <TrendingCollection {...item} />
+            <TrendingCollection data={item} />
           </S.CardWrapper>
         </div>
       )),
     };
-  }, [trending]);
+  }, [travelRoute]);
 
   const sliderRef = useRef<Slider>(null);
 
+
   return (
     <>
-      <NFTCardHeader title={t('nft.trendingCollections')}>
+      <NFTCardHeader title={t("page.home.popularRoute.title")}>
         {isTabletOrHigher && (
           <Row align="middle">
             <Col>
@@ -62,9 +73,9 @@ export const TrendingCollections: React.FC = () => {
       </NFTCardHeader>
 
       <S.SectionWrapper>
-        {mobileOnly && trendingList.mobile}
+        {mobileOnly && travelRouteList.mobile}
 
-        {isTabletOrHigher && trending.length > 0 && (
+        {isTabletOrHigher && travelRoute.length > 0 && (
           <Carousel
             ref={sliderRef}
             slidesToShow={3}
@@ -77,7 +88,7 @@ export const TrendingCollections: React.FC = () => {
               },
             ]}
           >
-            {trendingList.tablet}
+            {travelRouteList.tablet}
           </Carousel>
         )}
       </S.SectionWrapper>

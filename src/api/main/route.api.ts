@@ -77,7 +77,7 @@ export const getLocationTableData = async (pagination: Pagination): Promise<Tabl
     const rs = await httpApi.get<Location[]>('route/get-data?type=location');
     return new Promise((res) => res({ data: rs.data, pagination: { ...pagination, total: 16 }, }));
 };
-export const CreateLocation = async (data: Location): Promise<Location> => await httpApi.post("route/create-location", data).then((res) => res.data);
+export const CreateLocation = async (data: Location): Promise<Location> => await httpApi.post<Location>("route/create-location", data).then((res) => res.data);
 export const EditLocation= async (data: Location): Promise<boolean> => await httpApi.put("route/edit-location", data).then((res) => res.data);
 
 /// route
@@ -107,3 +107,5 @@ export const  getTravelRouteTableData = async (pagination: Pagination): Promise<
 export const CreateTravelRoute = async (data: TravelRoute): Promise<TravelRoute> => await httpApi.post<TravelRoute>("route/create-travel-route", data).then((res) => res.data);
 export const EditTravelRoute= async (data: TravelRoute): Promise<boolean> => await httpApi.put("route/edit-travel-route", data).then((res) => res.data);
 export const SearchTravelRoute = async (data: TravelRouteSearchData): Promise<TravelRoute[]> => await httpApi.post<TravelRoute[]>("route/search-travel-route", data).then((res) => res.data);
+
+export const GetRouteData = async (type:string):Promise<any> => httpApi.get(`route/get-data?type=${type}`).then(res=>res.data).catch(err=>err);

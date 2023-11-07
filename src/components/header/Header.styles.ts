@@ -79,11 +79,12 @@ interface ProfileColumn {
 }
 
 export const ProfileColumn = styled(Col)<ProfileColumn>`
+
+background-color: var(--primary-color);
   @media only screen and ${media.md} {
     ${(props) =>
       props?.$isTwoColumnsLayout &&
       css`
-        background-color: var(--sider-background-color);
         padding: ${LAYOUT.desktop.paddingVertical} ${LAYOUT.desktop.paddingHorizontal};
       `}
   }

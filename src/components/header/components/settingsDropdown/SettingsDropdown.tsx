@@ -11,7 +11,7 @@ export const SettingsDropdown: React.FC = () => {
   return (
     <Dropdown overlay={<SettingsOverlay />} trigger={['click']} onVisibleChange={setOpened}>
       <HeaderActionWrapper>
-        <Button type={isOpened ? 'ghost' : 'text'} icon={<SettingOutlined />} />
+        <Button type={isOpened ? 'ghost' : 'text'} icon={<SettingOutlined style={{color:"white"}} />} />
       </HeaderActionWrapper>
     </Dropdown>
   );

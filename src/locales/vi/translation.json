@@ -18,50 +18,57 @@
         "undo": "HỦY",
         "warning": "Văn bản cảnh báo",
         "warningDescription": "Đây là một thông báo cảnh báo về việc sao chép văn bản."
-      },
-      "auth": {
+    },
+    "auth": {
         "signUpSuccessDescription": "Vui lòng sử dụng thông tin đăng nhập mới của bạn để đăng nhập",
         "signUpSuccessMessage": "Người dùng mới đã được tạo"
-      },
-    "page":{
-        "home":{
-            "btn":{
-                "addReturnDate":"Thêm Ngày Về"
+    },
+    "page": {
+        "home": {
+            "searchSchedule":{
+                "from":"Nơi đi",
+                "to":"Nơi đến",
+                "departureDate":"Ngày đi",
+                "returnDate":"Thêm ngày về",
+                "search":"Tìm kiếm"
             },
-            "tooltip":{
-                "removeReturnDate":"Bỏ Ngày Về"
+            "popularRoute":{
+                "title":"Các tuyến đường Phổ Biến"
+            },
+            "tooltip": {
+                "removeReturnDate": "Bỏ Ngày Về"
             }
         }
     },
     "autoCompletes": {
         "antDesign": "AntDesign",
-        "antDesignFaq": "AntDesign FAQ",
-        "antDesignLanguage": "AntDesign design language",
-        "antDesignUI": "AntDesign UI",
-        "antDesignUIFaq": "AntDesign UI FAQ",
-        "articles": "Articles",
-        "basic": "Basic AutoComplete",
-        "categories": "AutoComplete with categories",
-        "customOptions": "AutoComplete with custom options",
-        "inputHere": "input here",
-        "libraries": "Libraries",
-        "solutions": "Solutions"
+        "antDesignFaq": "Câu hỏi thường gặp về AntDesign",
+        "antDesignLanguage": "Ngôn ngữ thiết kế AntDesign",
+        "antDesignUI": "Giao diện AntDesign",
+        "antDesignUIFaq": "Câu hỏi thường gặp về giao diện AntDesign",
+        "articles": "Bài viết",
+        "basic": "Tự động hoàn thành cơ bản",
+        "categories": "Tự động hoàn thành với các danh mục",
+        "customOptions": "Tự động hoàn thành với các tùy chọn tùy chỉnh",
+        "inputHere": "nhập vào đây",
+        "libraries": "Thư viện",
+        "solutions": "Giải pháp"
     },
     "breadcrumbs": {
         "antd": "Ant Design",
-        "application": "An Application",
-        "applicationCenter": "Application Center",
-        "applicationList": "Application List",
-        "basic": "Basic breadcrumb",
-        "button": "Button",
-        "component": "Component",
-        "customSeparator": "Breadcrumb with custom separator",
-        "general": "General",
-        "home": "Home",
-        "layout": "Layout",
-        "navigation": "Navigation",
-        "withDropdown": "Breadcrumb with dropdown",
-        "withIcon": "Breadcrumb with icon"
+        "application": "Một ứng dụng",
+        "applicationCenter": "Trung tâm ứng dụng",
+        "applicationList": "Danh sách ứng dụng",
+        "basic": "Đường dẫn cơ bản",
+        "button": "Nút",
+        "component": "Thành phần",
+        "customSeparator": "Đường dẫn với dấu phân cách tùy chỉnh",
+        "general": "Chung",
+        "home": "Trang chủ",
+        "layout": "Bố cục",
+        "navigation": "Điều hướng",
+        "withDropdown": "Đường dẫn với trình đơn thả xuống",
+        "withIcon": "Đường dẫn với biểu tượng"
     },
     "buttons": {
         "click": "Nhấn vào tôi!",
@@ -84,43 +91,43 @@
         "types": "Loại nút"
     },
     "charts": {
-        "averageValue": "Average Value",
-        "barLabel": "Bar Animation Delay",
-        "coal": "Coal",
-        "direct": "Direct",
-        "females": "Females",
-        "gas": "Gas",
-        "gradientLabel": "Gradient Stacked Area",
-        "hydro": "Hydro",
-        "incomeOf": "Income of Germany and France since 1950",
-        "lineRace": "Line Race",
-        "males": "Males",
-        "nuclear": "Nuclear",
-        "oil": "Oil",
-        "pie": "Pie",
-        "scatter": "Scatter",
-        "search": "Search Engine",
-        "union": "Union Ads",
-        "video": "Video Ads",
-        "visitorsFrom": "Visitors from"
+        "averageValue": "Giá trị trung bình",
+        "barLabel": "Độ trễ hoạt ảnh thanh",
+        "coal": "Than",
+        "direct": "Trực tiếp",
+        "females": "Nữ",
+        "gas": "Khí đốt",
+        "gradientLabel": "Diện tích xếp chồng gradient",
+        "hydro": "Điện thủy lực",
+        "incomeOf": "Thu nhập của Đức và Pháp từ năm 1950",
+        "lineRace": "Đường chạy đua",
+        "males": "Nam",
+        "nuclear": "Năng lượng hạt nhân",
+        "oil": "Dầu",
+        "pie": "Bánh",
+        "scatter": "Phân tán",
+        "search": "Công cụ tìm kiếm",
+        "union": "Quảng cáo liên minh",
+        "video": "Quảng cáo video",
+        "visitorsFrom": "Khách truy cập từ"
     },
     "checkboxes": {
-        "apple": "Apple",
-        "basic": "Basic checkbox",
-        "check": "Check",
-        "checkbox": "Checkbox",
-        "checked": "Checked",
-        "controlled": "Controlled checkbox",
-        "disable": "Disable",
-        "disabled": "Disabled",
-        "disabledCheckbox": "Disabled checkbox",
-        "enable": "Enable",
-        "enabled": "Enabled",
-        "group": "Checkbox group",
-        "orange": "Orange",
-        "pear": "Pear",
-        "uncheck": "Uncheck",
-        "unchecked": "Unchecked"
+        "apple": "Quả táo",
+        "basic": "Hộp kiểm cơ bản",
+        "check": "Kiểm tra",
+        "checkbox": "Hộp kiểm",
+        "checked": "Đã chọn",
+        "controlled": "Hộp kiểm được kiểm soát",
+        "disable": "Vô hiệu hóa",
+        "disabled": "Bị vô hiệu hóa",
+        "disabledCheckbox": "Hộp kiểm bị vô hiệu hóa",
+        "enable": "Bật",
+        "enabled": "Đã bật",
+        "group": "Nhóm hộp kiểm",
+        "orange": "Màu cam",
+        "pear": "Trái lê",
+        "uncheck": "Bỏ chọn",
+        "unchecked": "Không được chọn"
     },
     "common": {
         "address": "Địa chỉ",
@@ -191,7 +198,7 @@
         "maps": "Bản đồ",
         "modal": "Cửa sổ",
         "moreDetails": "Chi tiết hơn",
-        "money":"$",
+        "money": "$",
         "name": "Tên",
         "neurologist": "Bác sĩ Nội tiết",
         "newPassword": "Mật khẩu mới",
@@ -265,386 +272,391 @@
                 "area": "Khu Vực",
                 "lng": "lng",
                 "lat": "Lat",
-                "address":"Địa Chỉ",
-                "city":"Thành phố",
-                "district":"Quận/Huyện",
-                "ward":"Phường/Xã",
-                "messSelectErr":"Không thể chọn cùng một Vị Trí"
+                "address": "Địa Chỉ",
+                "city": "Thành phố",
+                "district": "Quận/Huyện",
+                "ward": "Phường/Xã",
+                "messSelectErr": "Không thể chọn cùng một Vị Trí"
             },
-            "departureDate":"Ngày Đi",
-            "returnDate":"Ngày Về",
-            "detail":{
-                "title":"Chi Tiết Tuyến Đường"
+            "departureDate": "Ngày Đi",
+            "returnDate": "Ngày Về",
+            "detail": {
+                "title": "Chi Tiết Tuyến Đường"
             },
-            "from":"Nơi Đi",
-            "to":"Nơi Đến",
+            "from": "Nơi Đi",
+            "to": "Nơi Đến",
             "distance": "Khaoảng Cách",
             "time": "Thời Gian Di Chuyển",
-            "price":"Gía"
+            "price": "Gía",
+            "book": "Chọn Tuyến",
+            "close": "Đóng"
         },
         "routeDetail": "Chi Tiết Tuyến Đường",
         "preview": "Xem Trước",
         "create": "Tạo Mới",
-        "ticket":{
-            "title":"Vé Xe",
-            "list":"Danh Sách Vé Xe",
-            "detail":{
-                "title":"Chi Tiết Vé Xe"
+        "ticket": {
+            "title": "Vé Xe",
+            "list": "Danh Sách Vé Xe",
+            "detail": {
+                "title": "Chi Tiết Vé Xe",
+                "name": "Họ và Tên",
+                "age": "Tuổi",
+                "seat": "Vị Trí Ghế",
+                "price": "Gía Vé"
             },
-            "refund":{
-                "title":"Vé Hủy"
+            "refund": {
+                "title": "Vé Hủy"
             },
-            "phone":"Số Điện Thoại",
-            "name":"Tên Người Đặt Vé",
-            "user":"Travel User",
-            "createdAt":"Thời Điểm Đặt"
+            "phone": "Số Điện Thoại",
+            "name": "Tên Người Đặt Vé",
+            "user": "Travel User",
+            "createdAt": "Thời Điểm Đặt"
         }
     },
     "medical-dashboard": {
         "activity": {
-            "kcalBurned": "kcal burned on",
-            "title": "Activity"
+            "kcalBurned": "kcal đã đốt cháy",
+            "title": "Hoạt động"
         },
         "bloodScreening": {
-            "flag": "Flag",
-            "high": "HIGH",
-            "low": "LOW",
-            "norm": "NORM",
-            "result": "Result",
-            "test": "Test",
-            "title": "Blood screening",
-            "units": "Units"
+            "flag": "Mốc",
+            "high": "CAO",
+            "low": "THẤP",
+            "norm": "BÌNH THƯỜNG",
+            "result": "Kết quả",
+            "test": "Kiểm tra",
+            "title": "Xét nghiệm máu",
+            "units": "Đơn vị"
         },
-        "bones": "Bones",
+        "bones": "Xương",
         "covid": {
-            "casesPerDay": "cases/day",
-            "deaths": "deaths",
-            "title": "Real COVID-19 Statistics"
+            "casesPerDay": "trường hợp/ngày",
+            "deaths": "tử vong",
+            "title": "Thống kê COVID-19 thực tế"
         },
-        "fat": "Fat",
+        "fat": "Chất béo",
         "favoriteDoctors": {
-            "lastVisit": "Last visit",
-            "title": "Favorite doctors"
+            "lastVisit": "Lần thăm khám cuối cùng",
+            "title": "Các bác sĩ yêu thích"
         },
         "health": {
             "ecology": {
-                "description": "The environment is a major determinant of health, estimated to account for almost 20% of all deaths in the WHO European Region.",
-                "title": "Ecology"
+                "description": "Môi trường là một yếu tố quyết định chính đến sức khỏe, ước tính chiếm gần 20% tổng số ca tử vong ở Khu vực châu Âu của WHO.",
+                "title": "Sinh thái học"
             },
             "genetics": {
-                "description": "Multivariate studies show that genetic factors enhancing SWB are partly overlapping with those protecting against depression and other mental health problems.",
-                "title": "Genetics"
+                "description": "Các nghiên cứu đa biến cho thấy các yếu tố di truyền nâng cao SWB một phần chồng chéo với các yếu tố bảo vệ chống lại trầm cảm và các vấn đề sức khỏe tâm thần khác.",
+                "title": "Di truyền"
             },
             "lifestyle": {
-                "description": "According to WHO, 60% of related factors to individual health and quality of life are correlated to lifestyle.",
-                "title": "Lifestyle"
+                "description": "Theo WHO, 60% các yếu tố liên quan đến sức khỏe và chất lượng sống của cá nhân có liên quan đến lối sống.",
+                "title": "Lối sống"
             },
             "medicine": {
-                "description": "Relationship between health insurance (or lack of insurance), use of medical care and health outcomes for specific conditions and types of services, and with overall health status and mortality.",
-                "title": "Medicine"
+                "description": "Mối quan hệ giữa bảo hiểm y tế (hoặc thiếu bảo hiểm), việc sử dụng dịch vụ chăm sóc y tế và kết quả y tế cho các bệnh trạng và loại dịch vụ cụ thể, và với tình trạng sức khỏe tổng thể và tỷ lệ tử vong.",
+                "title": "Y học"
             },
-            "title": "Health"
+            "title": "Sức khỏe"
         },
         "latestScreenings": {
-            "friends": "Friends",
-            "month": "Month",
-            "statistics": "Statistics",
-            "title": "Latest screenings"
+            "friends": "Bạn bè",
+            "month": "Tháng",
+            "statistics": "Thống kê",
+            "title": "Các lần sàng lọc gần đây nhất"
         },
         "map": {
-            "polyclinic": "Polyclinic"
+            "polyclinic": "Phòng khám đa khoa"
         },
-        "news": "News",
+        "news": "Tin tức",
         "patientResults": {
             "patientAdmission": {
-                "description": "Admission of a patient means allowing and facilitating a patient to stay in the hospital unit or ward for observation, investigation, and treatment of the disease he or she is suffering from.",
-                "title": "Patient admission"
+                "description": "Việc nhập viện của bệnh nhân có nghĩa là cho phép và tạo điều kiện cho bệnh nhân lưu lại khoa hoặc phòng bệnh để theo dõi, điều tra và điều trị căn bệnh mà họ đang mắc phải.",
+                "title": "Nhập viện bệnh nhân"
             },
             "patientDischarge": {
-                "description": "A hospital will discharge you when you no longer need to receive inpatient care and can go home. Or, a hospital will discharge you to send you to another type of facility.",
-                "title": "Patient's discharge"
+                "description": "Bệnh viện sẽ xuất viện cho bạn khi bạn không cần phải nhận chăm sóc nội trú và có thể về nhà. Hoặc, bệnh viện sẽ xuất viện cho bạn để đưa bạn đến một cơ sở khác.",
+                "title": "Xuất viện bệnh nhân"
             },
-            "title": "Patient timeline",
+            "title": "Dòng thời gian của bệnh nhân",
             "treatmentStarts": {
-                "description": "Part of the evaluation and treatment of any patient, regardless of condition or diagnosis, is an appropriate framework or pathway for diagnosis, treatment, and, if necessary, referral for specialty care.",
-                "title": "Treatment starts"
+                "description": "Một phần của việc đánh giá và điều trị cho bất kỳ bệnh nhân nào, bất kể tình trạng hoặc chẩn đoán, là một khung hoặc con đường thích hợp để chẩn đoán, điều trị và nếu cần, chuyển đến chuyên khoa chăm sóc.",
+                "title": "Bắt đầu điều trị"
             }
         },
-        "protein": "Protein",
+        "protein": "Chất đạm",
         "treatmentPlan": {
-            "noVisits": "No visits for that day",
-            "title": "Treatment plan"
+            "noVisits": "Không có lịch thăm khám nào cho ngày hôm đó",
+            "title": "Kế hoạch điều trị"
         },
-        "water": "Water"
+        "water": "Nước"
     },
     "dataDisplay": {
         "avatars": {
-            "badge": "Avatar with badge",
-            "groups": "Avatar groups",
-            "shapes": "Avatar shapes",
-            "sizes": "Avatar sizes",
-            "user": "Ant User"
+            "badge": "Ảnh đại diện có huy hiệu",
+            "groups": "Nhóm ảnh đại diện",
+            "shapes": "Hình dạng ảnh đại diện",
+            "sizes": "Kích thước ảnh đại diện",
+            "user": "Người dùng Ant"
         },
         "badges": {
-            "cardDescription": "and raises the spyglass.",
-            "cardTitle": "Pushes open the window",
-            "default": "Default",
-            "error": "Error",
+            "cardDescription": "và giơ cao kính viễn vọng.",
+            "cardTitle": "Đẩy mở cửa sổ",
+            "default": "Mặc định",
+            "error": "Lỗi",
             "hippies": "Hippies",
-            "overflow": "Badge with overflow",
-            "processing": "Processing",
-            "ribbon": "Ribbon badge",
-            "sizes": "Badge sizes",
-            "status": "Status badge",
-            "success": "Success",
-            "warning": "Warning"
+            "overflow": "Huy hiệu tràn",
+            "processing": "Đang xử lý",
+            "ribbon": "Huy hiệu ruy băng",
+            "sizes": "Kích thước huy hiệu",
+            "status": "Huy hiệu trạng thái",
+            "success": "Thành công",
+            "warning": "Cảnh báo"
         },
         "collapse": {
-            "accordion": "Accordion collapse",
-            "basic": "Basic collapse",
-            "ghost": "Ghost collapse",
-            "nested": "Nested collapse",
-            "nestPanel": "This is panel nest panel",
-            "panelHeader": "This is panel header",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "accordion": "Thu gọn kiểu accordion",
+            "basic": "Thu gọn cơ bản",
+            "ghost": "Thu gọn mờ",
+            "nested": "Thu gọn lồng nhau",
+            "nestPanel": "Đây là bảng điều khiển lồng nhau",
+            "panelHeader": "Đây là tiêu đề bảng điều khiển",
+            "text": "Chó là một loại động vật được thuần hóa. Được biết đến với lòng trung thành và đáng tin cậy, nó có thể được tìm thấy như một vị khách được chào đón trong nhiều hộ gia đình trên thế giới."
         },
         "pagination": {
-            "basic": "Basic pagination",
-            "disabled": "Disabled pagination",
-            "manyPages": "Many pages pagination",
-            "pageSize": "Change page size",
-            "quickJump": "Quick jump pagination"
+            "basic": "Phân trang cơ bản",
+            "disabled": "Phân trang bị vô hiệu hóa",
+            "manyPages": "Phân trang nhiều trang",
+            "pageSize": "Thay đổi kích thước trang",
+            "quickJump": "Phân trang nhảy nhanh"
         }
     },
     "dateTimePickers": {
-        "basic": "Basic pickers",
-        "disabled": "Disabled pickers",
-        "range": "Range picker",
-        "sizes": "Picker sizes",
-        "time": "Time picker"
+        "basic": "Bộ chọn cơ bản",
+        "disabled": "Bộ chọn bị vô hiệu hóa",
+        "range": "Bộ chọn phạm vi",
+        "sizes": "Kích thước bộ chọn",
+        "time": "Bộ chọn thời gian"
     },
     "dropdowns": {
-        "basic": "Basic dropdown",
+        "basic": "Trình đơn thả xuống cơ bản",
         "bc": "bottomCenter",
         "bl": "bottomLeft",
         "br": "bottomRight",
-        "clickable": "Clickable dropdown",
-        "clickMe": "Click me",
-        "context": "Context dropdown",
-        "dangerItem": "a danger item",
-        "disabled": "disabled",
-        "firstItem": "1st menu item",
-        "hoverMe": "Hover me",
-        "positions": "Dropdown positions",
-        "rightClick": "Right Click on here",
-        "secondItem": "2nd menu item",
+        "clickable": "Trình đơn thả xuống có thể nhấp",
+        "clickMe": "Nhấp vào tôi",
+        "context": "Trình đơn thả xuống ngữ cảnh",
+        "dangerItem": "một mục nguy hiểm",
+        "disabled": "vô hiệu hóa",
+        "firstItem": "mục menu thứ 1",
+        "hoverMe": "Di chuột qua tôi",
+        "positions": "Vị trí trình đơn thả xuống",
+        "rightClick": "Nhấp chuột phải vào đây",
+        "secondItem": "mục menu thứ 2",
         "tc": "topCenter",
-        "thirdItem": "3rd menu item",
+        "thirdItem": "mục menu thứ 3",
         "tl": "topLeft",
         "tr": "topRight"
     },
     "error404": {
-        "comeBack": "Return to Home",
-        "notFound": "Sorry, page not found!"
+        "comeBack": "Trở về trang chủ",
+        "notFound": "Xin lỗi, trang không được tìm thấy!"
     },
     "forgotPassword": {
-        "description": "Enter your email address and we’ll send an verification code to reset your password",
-        "sendInstructions": "Send instructions",
-        "successReset": "We've sent to your email address the reset link"
+        "description": "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi mã xác minh để đặt lại mật khẩu của bạn",
+        "sendInstructions": "Gửi hướng dẫn",
+        "successReset": "Chúng tôi đã gửi đến địa chỉ email của bạn liên kết đặt lại"
     },
     "forms": {
-        "controlForm": "Control form",
+        "controlForm": "Biểu mẫu điều khiển",
         "controlFormLabels": {
-            "addUser": "Add User",
-            "groupName": "Group Name",
-            "groupNameError": "Group Name is required",
-            "newUser": "New User",
-            "noUser": "No user yet.",
-            "userList": "User List"
+            "addUser": "Thêm người dùng",
+            "groupName": "Tên nhóm",
+            "groupNameError": "Tên nhóm là bắt buộc",
+            "newUser": "Người dùng mới",
+            "noUser": "Chưa có người dùng nào.",
+            "userList": "Danh sách người dùng"
         },
-        "dynamicForm": "Dynamic form",
+        "dynamicForm": "Biểu mẫu động",
         "dynamicFormLabels": {
-            "addSights": "Add sights",
-            "area": "Area",
-            "areaError": "Area is required",
-            "beijing": "Beijing",
+            "addSights": "Thêm điểm tham quan",
+            "area": "Khu vực",
+            "areaError": "Khu vực là bắt buộc",
+            "beijing": "Bắc Kinh",
             "greatWall": "Great Wall",
-            "orientalPearl": "Oriental Pearl",
-            "price": "Price",
-            "priceError": "Price is required",
-            "shanghai": "Shanghai",
-            "sight": "Sight",
-            "sightError": "Sight is required",
-            "theBund": "The Bund",
-            "tiananmen": "Tiananmen"
+            "orientalPearl": "Đài truyền hình Đông Phương Minh Châu",
+            "price": "Giá",
+            "priceError": "Giá là bắt buộc",
+            "shanghai": "Thượng Hải",
+            "sight": "Điểm tham quan",
+            "sightError": "Điểm tham quan là bắt buộc",
+            "theBund": "Bến Thượng Hải",
+            "tiananmen": "Quảng trường Thiên An Môn"
         },
-        "stepForm": "Step form",
+        "stepForm": "Biểu mẫu bước",
         "stepFormLabels": {
-            "addressError": "Address is required",
-            "birthday": "Birthday",
-            "birthdayError": "Birthday is required",
-            "cityError": "City is required",
-            "confirm": "Confirm",
-            "confirmPasswordError": "Confirm Password is required",
-            "countryError": "Country is required",
-            "done": "Done",
-            "female": "Female",
-            "firstNameError": "First Name is required",
-            "gender": "Gender",
-            "info": "Info",
-            "lastNameError": "Last Name is required",
-            "location": "Location",
-            "login": "Email/Login",
-            "loginError": "Email/Login is required",
-            "male": "Male",
-            "mr": "Mr",
-            "mrs": "Mrs",
-            "next": "Next",
-            "passwordError": "Password is required",
-            "phoneError": "Phone is required",
-            "previous": "Previous",
-            "salutation": "Salutation",
-            "salutationError": "Salutation is required",
-            "zipCodeError": "Zip code is required"
+            "addressError": "Địa chỉ là bắt buộc",
+            "birthday": "Ngày sinh",
+            "birthdayError": "Ngày sinh là bắt buộc",
+            "cityError": "Thành phố là bắt buộc",
+            "confirm": "Xác nhận",
+            "confirmPasswordError": "Xác nhận mật khẩu là bắt buộc",
+            "countryError": "Quốc gia là bắt buộc",
+            "done": "Xong",
+            "female": "Nữ",
+            "firstNameError": "Tên đệm là bắt buộc",
+            "gender": "Giới tính",
+            "info": "Thông tin",
+            "lastNameError": "Họ là bắt buộc",
+            "location": "Địa điểm",
+            "login": "Email/Đăng nhập",
+            "loginError": "Email/Đăng nhập là bắt buộc",
+            "male": "Nam",
+            "mr": "Ông",
+            "mrs": "Bà",
+            "next": "Tiếp theo",
+            "passwordError": "Mật khẩu là bắt buộc",
+            "phoneError": "Số điện thoại là bắt buộc",
+            "previous": "Quay lại",
+            "salutation": "Thị tính",
+            "salutationError": "Thị tính là bắt buộc",
+            "zipCodeError": "Mã zip là bắt buộc"
         },
-        "validationForm": "Validation form",
-        "validationFormLabels": {
-            "blue": "Blue",
-            "checkboxGroup": "Checkbox Group",
-            "china": "China",
-            "clickToDrag": "Click or drag file to this area to upload",
-            "clickToUpload": "Click to upload",
-            "colorError": "Please select your favorite colors!",
-            "countryError": "Please select your country!",
+        "validationForm": {
+            "blue": "Xanh dương",
+            "checkboxGroup": "Nhóm hộp kiểm",
+            "china": "Trung Quốc",
+            "clickToDrag": "Nhấp hoặc kéo tệp vào khu vực này để tải lên",
+            "clickToUpload": "Nhấp để tải lên",
+            "colorError": "Vui lòng chọn màu yêu thích của bạn!",
+            "countryError": "Vui lòng chọn quốc gia của bạn!",
             "dragger": "Dragger",
-            "green": "Green",
-            "inputNumber": "Input Number",
-            "item": "Item",
-            "itemError": "Please pick an item!",
+            "green": "Xanh lá",
+            "inputNumber": "Nhập số",
+            "item": "Mục",
+            "itemError": "Vui lòng chọn một mục!",
             "machines": "machines",
-            "radioButton": "Radio Button",
-            "radioGroup": "Radio Group",
-            "rate": "Rate",
-            "red": "Red",
-            "select": "Select",
-            "selectColor": "Please select favorite colors",
-            "selectCountry": "Please select a country",
-            "selectMultiple": "Select [multiple]",
+            "radioButton": "Nút radio",
+            "radioGroup": "Nhóm nút radio",
+            "rate": "Tỷ lệ",
+            "red": "Đỏ",
+            "select": "Chọn",
+            "selectColor": "Vui lòng chọn màu yêu thích của bạn",
+            "selectCountry": "Vui lòng chọn quốc gia",
+            "selectMultiple": "Chọn [nhiều]",
             "slider": "Slider",
-            "supportSingle": "Support for a single or bulk upload.",
+            "supportSingle": "Hỗ trợ tải lên đơn lẻ hoặc hàng loạt.",
             "switch": "Switch",
-            "upload": "Upload",
-            "usa": "U.S.A"
+            "upload": "Tải lên",
+            "usa": "Mỹ"
         },
         "bus": {
-            "newBusStructure": "Tạo Mới Kết Cấu Xe Buýt",
-            "lableSelectTypeBus": "Vui Lòng Chọn Loại Xe Buýt",
-            "newTypeSeat": "Tạo Mới Loại Ghế",
-            "newSeatStructure": "Tạo Mới Kết Cấu Ghế"
+            "newBusStructure": "Tạo Cấu trúc Xe buýt Mới",
+            "lableSelectTypeBus": "Vui lòng chọn Loại Xe buýt",
+            "newTypeSeat": "Tạo Loại Ghế Mới",
+            "newSeatStructure": "Tạo Cấu trúc Ghế Mới"
         },
-        "register":{
-            "name":"Họ và Tên",
-            "phone":"Số Điện Thoại",
-            "gender":{
-                "title":"Giới Tính",
-                "male":"Nam",
-                "female":"Nữ"
+        "register": {
+            "name": "Họ và Tên",
+            "phone": "Số Điện Thoại",
+            "gender": {
+                "title": "Giới Tính",
+                "male": "Nam",
+                "female": "Nữ"
             },
-            "dob":{
-                "title":"Ngày Sinh",
-                "err":"Chỉ dành cho người trên 15 tuổi"
+            "dob": {
+                "title": "Ngày Sinh",
+                "err": "Chỉ dành cho người trên 15 tuổi"
             }
         }
     },
     "header": {
-        "changeLanguage": "Change language",
-        "changeTheme": "Change theme",
-        "darkTheme": "Dark",
-        "lightTheme": "Light",
-        "logout": "Logout",
+        "changeLanguage": "Thay đổi ngôn ngữ",
+        "changeTheme": "Thay đổi chủ đề",
+        "darkTheme": "Tối",
+        "lightTheme": "Sáng",
+        "logout": "Đăng xuất",
         "nightMode": {
-            "from": "From",
-            "title": "Nightmode",
-            "to": "To"
+            "from": "Từ",
+            "title": "Chế độ ban đêm",
+            "to": "Đến"
         },
         "notifications": {
-            "loginAttempt": "There was an attempt to log in to your account from another device",
-            "mention": "mentioned you in <0>{{place}}</0>",
-            "noNotifications": "No notifications yet",
-            "readAll": "Mark all as read",
-            "serverError": "The server is not responding, try again later",
-            "successPayment": "Your payment was successfully made",
-            "viewAll": "View all"
+            "loginAttempt": "Có một cố gắng đăng nhập vào tài khoản của bạn từ một thiết bị khác",
+            "mention": "đề cập đến bạn trong <0>{{place}}</0>",
+            "noNotifications": "Chưa có thông báo nào",
+            "readAll": "Đánh dấu tất cả là đã đọc",
+            "serverError": "Máy chủ không phản hồi, thử lại sau",
+            "successPayment": "Thanh toán của bạn đã được thực hiện thành công",
+            "viewAll": "Xem tất cả"
         },
-        "search": "Search"
+        "search": "Tìm kiếm"
     },
     "inputs": {
-        "basic": "Basic input",
-        "clipboard": "clipboard input",
-        "default": "default size",
-        "enterName": "Enter your username",
-        "extra": "Extra information",
-        "func": "Functional inputs",
-        "large": "large size",
-        "openURL": "open URL input",
-        "password": "Password input",
-        "passwordText": "input password",
-        "prefixSuffix": "Prefix & suffix",
-        "prePost": "Pre & post tabs",
-        "search": "Search inputs",
-        "searchText": "input search text",
-        "sizes": "Input sizes",
-        "small": "small size",
-        "textarea": "Textarea"
+        "basic": "Đầu vào cơ bản",
+        "clipboard": "Đầu vào clipboard",
+        "default": "Kích thước mặc định",
+        "enterName": "Nhập tên của bạn",
+        "extra": "Thông tin bổ sung",
+        "func": "Đầu vào chức năng",
+        "large": "Kích thước lớn",
+        "openURL": "Đầu vào URL mở",
+        "password": "Đầu vào mật khẩu",
+        "passwordText": "Nhập mật khẩu",
+        "prefixSuffix": "Tiền tố và hậu tố",
+        "prePost": "Tab trước và sau",
+        "search": "Đầu vào tìm kiếm",
+        "searchText": "Nhập văn bản tìm kiếm",
+        "sizes": "Kích thước đầu vào",
+        "small": "Kích thước nhỏ",
+        "textarea": "Vùng văn bản"
     },
     "kanban": {
-        "addParticipant": "Set assignee",
-        "addTag": "Add tag",
-        "createColumn": "Create new column",
-        "description": "Description",
-        "label": "Label",
-        "sameTag": "You can't add the same tag!",
-        "tags": "Tags",
-        "title": "Title",
-        "unnamedLabel": "Unnamed label",
-        "archive": "Archive"
+        "addParticipant": "Đặt người được giao việc",
+        "addTag": "Thêm thẻ",
+        "createColumn": "Tạo cột mới",
+        "description": "Mô tả",
+        "label": "Nhãn",
+        "sameTag": "Bạn không thể thêm cùng một thẻ!",
+        "tags": "Thẻ",
+        "title": "Tiêu đề",
+        "unnamedLabel": "Nhãn chưa đặt tên",
+        "archive": "Lưu trữ"
     },
     "login": {
-        "facebookLink": "Continue with Facebook",
-        "googleLink": "Continue with Google",
-        "loginInfo": "Enter your email address and password to access admin panel",
-        "noAccount": "Don’t have an account? Create one",
-        "rememberMe": "Remember me",
-        "signupLink": "here"
+        "facebookLink": "Tiếp tục với Facebook",
+        "googleLink": "Tiếp tục với Google",
+        "loginInfo": "Nhập địa chỉ email và mật khẩu để truy cập bảng điều khiển quản trị",
+        "noAccount": "Chưa có tài khoản? Tạo một",
+        "rememberMe": "Nhớ tôi",
+        "signupLink": "ở đây"
     },
     "modals": {
-        "basic": "Basic modal",
-        "error": "Error",
-        "errorTitle": "This is an error message",
-        "fullscreen": "Fullscreen",
-        "fullscreenTitle": "Fullscreen Modal",
-        "info": "Info",
-        "infoModal": "Information modal",
-        "infoTitle": "This is a notification message",
-        "large": "Large",
-        "largeTitle": "Large Modal",
-        "middle": "Middle",
-        "middleTitle": "Middle Modal",
-        "open": "Open Modal",
-        "sizes": "Modal sizes",
-        "small": "Small",
-        "smallTitle": "Small Modal",
-        "someContent": "Some contents...",
-        "success": "Success",
-        "successTitle": "This is a success message",
-        "warning": "Warning",
-        "warningTitle": "This is a warning message"
+        "basic": "Cửa sổ thông báo cơ bản",
+        "error": "Lỗi",
+        "errorTitle": "Đây là một thông báo lỗi",
+        "fullscreen": "Toàn màn hình",
+        "fullscreenTitle": "Cửa sổ thông báo Toàn màn hình",
+        "info": "Thông tin",
+        "infoModal": "Cửa sổ thông báo Thông tin",
+        "infoTitle": "Đây là một thông báo thông tin",
+        "large": "Lớn",
+        "largeTitle": "Cửa sổ thông báo Lớn",
+        "middle": "Trung bình",
+        "middleTitle": "Cửa sổ thông báo Trung bình",
+        "open": "Mở Cửa sổ thông báo",
+        "sizes": "Kích thước của cửa sổ thông báo",
+        "small": "Nhỏ",
+        "smallTitle": "Cửa sổ thông báo Nhỏ",
+        "someContent": "Một số nội dung...",
+        "success": "Thành công",
+        "successTitle": "Đây là một thông báo thành công",
+        "warning": "Cảnh báo",
+        "warningTitle": "Đây là một thông báo cảnh báo"
     },
     "newPassword": {
-        "description": "Your new password must be different from previous password",
-        "successDescription": "Please, use your email with a new password to log in",
-        "successMessage": "New password was set",
-        "title": "Create new password"
+        "description": "Mật khẩu mới của bạn phải khác với mật khẩu trước đó",
+        "successDescription": "Vui lòng sử dụng email của bạn với mật khẩu mới để đăng nhập",
+        "successMessage": "Mật khẩu mới đã được đặt",
+        "title": "Tạo mật khẩu mới"
     },
     "newsFeed": {
         "apply": "Áp dụng",
@@ -672,156 +684,157 @@
         "warning": "Cảnh báo",
         "warningDescription": "Mô tả cảnh báo",
         "warningTitle": "Văn bản cảnh báo",
-        "withoutDescription": "Thông báo không có mô tả"
+        "withoutDescription": "Thông báo không có mô tả",
+        "paymentMethodRequired": "Vui lòng chọn phương thức thanh toán"
     },
     "popconfirm": {
-        "async": "Asynchronously close",
-        "basic": "Basic Popconfirm",
-        "content": "Are you sure to delete this task?",
-        "no": "No",
-        "openAsync": "Open Popconfirm with async logic",
-        "positions": "Popconfirm positions",
-        "yes": "Yes",
-        "yesClick": "Clicked on Yes."
+        "async": "Đóng bất đồng bộ",
+        "basic": "Popconfirm Cơ bản",
+        "content": "Bạn có chắc muốn xóa công việc này không?",
+        "no": "Không",
+        "openAsync": "Mở Popconfirm với logic bất đồng bộ",
+        "positions": "Vị trí Popconfirm",
+        "yes": "Có",
+        "yesClick": "Nhấp vào Có."
     },
     "popovers": {
-        "basic": "Basic popover",
+        "basic": "Popover Cơ bản",
         "bl": "BL",
-        "bottom": "Bottom",
+        "bottom": "Dưới",
         "br": "BR",
-        "click": "Click me!",
-        "content": "Content",
-        "focus": "Focus me!",
-        "hover": "Hover me!",
+        "click": "Nhấp vào tôi!",
+        "content": "Nội dung",
+        "focus": "Tập trung vào tôi!",
+        "hover": "Di chuột qua tôi!",
         "lb": "LB",
-        "left": "Left",
+        "left": "Trái",
         "lt": "LT",
-        "positions": "Popover positions",
+        "positions": "Vị trí Popover",
         "rb": "RB",
-        "right": "Right",
+        "right": "Phải",
         "rt": "RT",
-        "title": "Title",
+        "title": "Tiêu đề",
         "tl": "TL",
-        "top": "Top",
+        "top": "Trên",
         "tr": "TR",
-        "triggers": "Popover triggers"
+        "triggers": "Kích hoạt Popover"
     },
     "profile": {
-        "fullness": "fullness of your profile",
+        "fullness": "Đầy đủ thông tin hồ sơ của bạn",
         "nav": {
             "notifications": {
-                "actionRequired": "Action required",
-                "activities": "Activities",
-                "allNews": "All news",
-                "description": "Choose for which activities you want to get an email or push notification.",
-                "directMessages": "Direct messages",
-                "importantNews": "Important news and updates",
-                "mentions": "Mentions",
-                "push": "Push",
-                "reminders": "Reminders",
-                "settings": "Notifications settings",
+                "actionRequired": "Yêu cầu hành động",
+                "activities": "Hoạt động",
+                "allNews": "Tất cả tin tức",
+                "description": "Chọn cho hoạt động nào bạn muốn nhận thông báo qua email hoặc đẩy.",
+                "directMessages": "Tin nhắn trực tiếp",
+                "importantNews": "Tin tức và cập nhật quan trọng",
+                "mentions": "Đề cập",
+                "push": "Đẩy",
+                "reminders": "Nhắc nhở",
+                "settings": "Cài đặt thông báo",
                 "SMS": "SMS",
-                "title": "Notifications"
+                "title": "Thông báo"
             },
             "payments": {
-                "addNewCard": "Add New Card",
-                "cardholderName": "Cardholder Name",
-                "cardNumber": "Card Number",
-                "cardTheme": "Card Theme",
+                "addNewCard": "Thêm thẻ mới",
+                "cardholderName": "Tên chủ thẻ",
+                "cardNumber": "Số thẻ",
+                "cardTheme": "Giao diện thẻ",
                 "CVV": "CVV",
-                "date": "Date",
-                "details": "Details",
-                "expDate": "Exp. Date",
-                "noHistory": "There is no payment history at the moment",
-                "paymentHistory": "Payment history",
-                "paymentMethod": "Payment Method",
-                "recipient": "Recipient",
-                "sameCard": "You can't add the same card!",
+                "date": "Ngày",
+                "details": "Chi tiết",
+                "expDate": "Ngày hết hạn",
+                "noHistory": "Hiện không có lịch sử thanh toán",
+                "paymentHistory": "Lịch sử thanh toán",
+                "paymentMethod": "Phương thức thanh toán",
+                "recipient": "Người nhận",
+                "sameCard": "Bạn không thể thêm cùng một thẻ!",
                 "status": {
-                    "failed": "Failed",
-                    "paid": "Paid",
-                    "pending": "Pending",
-                    "scheduled": "Scheduled",
-                    "title": "Status"
+                    "failed": "Thất bại",
+                    "paid": "Đã thanh toán",
+                    "pending": "Đang chờ",
+                    "scheduled": "Đã lên lịch",
+                    "title": "Trạng thái"
                 },
-                "title": "Payments",
-                "totalAmount": "Total Amount",
-                "yourCardNumber": "Your card number",
-                "yourName": "Your name"
+                "title": "Thanh toán",
+                "totalAmount": "Tổng cộng",
+                "yourCardNumber": "Số thẻ của bạn",
+                "yourName": "Tên của bạn"
             },
             "personalInfo": {
-                "birthday": "Birthday",
-                "contactInfo": "Contact Info",
-                "female": "Female",
-                "language": "Language",
-                "male": "Male",
-                "nickname": "Nickname",
-                "notValidWebsite": "Please input a valid URL!",
-                "notVerified": "Not verified",
-                "otherInfo": "Other info",
-                "sex": "Sex",
-                "socialLinks": "Social links",
-                "title": "Personal Info",
-                "verified": "Verified",
-                "website": "Website",
-                "wrongNumber": "Wrong number"
+                "birthday": "Ngày sinh",
+                "contactInfo": "Thông tin liên hệ",
+                "female": "Nữ",
+                "language": "Ngôn ngữ",
+                "male": "Nam",
+                "nickname": "Bí danh",
+                "notValidWebsite": "Vui lòng nhập URL hợp lệ!",
+                "notVerified": "Chưa được xác minh",
+                "otherInfo": "Thông tin khác",
+                "sex": "Giới tính",
+                "socialLinks": "Liên kết mạng xã hội",
+                "title": "Thông tin cá nhân",
+                "verified": "Đã xác minh",
+                "website": "Trang web",
+                "wrongNumber": "Số điện thoại không đúng"
             },
             "securitySettings": {
-                "changePassword": "Change Password",
-                "confirmPassword": "Confirm Password",
-                "currentPassword": "Current Password",
-                "dontMatchPassword": "The two passwords that you entered do not match",
-                "newPassword": "New Password",
-                "notValidPassword": "Your password should be minimum eight characters and contain at least one uppercase letter, one lowercase letter and one number",
-                "requiredPassword": "Please input your password!",
-                "samePassword": "Your new password can't be same as previous password",
-                "title": "Security Settings",
-                "twoFactorAuth": "Two–factor authentication",
-                "verify": "Verify"
+                "changePassword": "Đổi mật khẩu",
+                "confirmPassword": "Xác nhận mật khẩu",
+                "currentPassword": "Mật khẩu hiện tại",
+                "dontMatchPassword": "Hai mật khẩu bạn nhập không khớp",
+                "newPassword": "Mật khẩu mới",
+                "notValidPassword": "Mật khẩu của bạn nên chứa ít nhất tám ký tự và có ít nhất một chữ cái viết hoa, một chữ cái viết thường và một số",
+                "requiredPassword": "Vui lòng nhập mật khẩu của bạn!",
+                "samePassword": "Mật khẩu mới của bạn không thể giống với mật khẩu trước đó",
+                "title": "Cài đặt bảo mật",
+                "twoFactorAuth": "Xác minh hai yếu tố",
+                "verify": "Xác minh"
             }
         },
-        "title": "Profile"
+        "title": "Hồ sơ"
     },
     "progress": {
-        "basic": "Basic progress",
-        "circle": "Circle progress",
-        "dashboard": "Dashboard progress",
-        "dynamic": "Dynamic progress",
-        "gradient": "Gradient progress"
+        "basic": "Tiến trình cơ bản",
+        "circle": "Tiến trình tròn",
+        "dashboard": "Tiến trình bảng điều khiển",
+        "dynamic": "Tiến trình động",
+        "gradient": "Tiến trình dạng gradient"
     },
     "radios": {
         "a": "A",
         "b": "B",
-        "basic": "Basic radio",
+        "basic": "Radio cơ bản",
         "c": "C",
         "d": "D",
-        "disabled": "Disabled",
-        "disabledRadio": "Disabled radio",
+        "disabled": "Bị vô hiệu hóa",
+        "disabledRadio": "Radio bị vô hiệu hóa",
         "radio": "Radio",
-        "radioButton": "Radio button",
-        "radioButtonSizes": "Radio button sizes",
-        "radioGroup": "Radio group",
-        "toggleDisabled": "Toggle disabled"
+        "radioButton": "Nút Radio",
+        "radioButtonSizes": "Kích thước nút Radio",
+        "radioGroup": "Nhóm Radio",
+        "toggleDisabled": "Chuyển đổi vô hiệu hóa"
     },
     "rates": {
-        "basic": "Basic rate",
-        "customIcons": "Rate with custom icons",
-        "halfStar": "Half star rate",
-        "readOnly": "Read only rate"
+        "basic": "Tỉ lệ cơ bản",
+        "customIcons": "Tỉ lệ với biểu tượng tùy chỉnh",
+        "halfStar": "Tỉ lệ nửa sao",
+        "readOnly": "Tỉ lệ chỉ đọc"
     },
     "results": {
-        "buyAgain": "Buy Again",
-        "error": "Error result",
-        "errorSubTitle": "Please check and modify the following information before resubmitting.",
-        "errorTitle": "Submission Failed",
-        "goConsole": "Go Console",
-        "info": "Info result",
-        "infoTitle": "Your operation has been executed",
-        "success": "Success result",
-        "successSubTitle": "Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait.",
-        "successTitle": "Successfully Purchased Cloud Server ECS!",
-        "warning": "Warning result",
-        "warningTitle": "There are some problems with your operation."
+        "buyAgain": "Mua Lại",
+        "error": "Kết quả Lỗi",
+        "errorSubTitle": "Vui lòng kiểm tra và sửa đổi thông tin sau trước khi gửi lại.",
+        "errorTitle": "Gửi thất bại",
+        "goConsole": "Điều hướng Console",
+        "info": "Kết quả Thông tin",
+        "infoTitle": "Thao tác của bạn đã được thực hiện",
+        "success": "Kết quả Thành công",
+        "successSubTitle": "Số đơn: 2017182818828182881 Cấu hình máy chủ đám mây mất từ 1-5 phút, vui lòng đợi.",
+        "successTitle": "Mua Thành Công Máy Chủ Đám Mây ECS!",
+        "warning": "Kết quả Cảnh báo",
+        "warningTitle": "Có một số vấn đề với thao tác của bạn."
     },
     "securityCodeForm": {
         "noCode": "Không nhận được mã xác minh?",
@@ -937,18 +950,18 @@
         "busList": {
             "name": "Danh Sach Xe Buýt",
             "number": "Sô Xe",
-            "status":{
-                "pending":"Chưa Xuất Phát",
-                "running":"Đang Chạy",
-                "finished":"Hoàn Thành",
-                "cancel":"Hủy",
-                "title":"Trạng Thái"
+            "status": {
+                "pending": "Chưa Xuất Phát",
+                "running": "Đang Chạy",
+                "finished": "Hoàn Thành",
+                "cancel": "Hủy",
+                "title": "Trạng Thái"
             },
-            "date":"Ngày Chạy",
-            "time":"Thời Gian Chạy",
-            "bus":"Xe Chạy",
-            "route":"Lộ Trình Di Chuyển",
-            "delay":"Thời Gian Hoãn"
+            "date": "Ngày Chạy",
+            "time": "Thời Gian Chạy",
+            "bus": "Xe Chạy",
+            "route": "Lộ Trình Di Chuyển",
+            "delay": "Thời Gian Hoãn"
         }
     },
     "tabs": {
@@ -993,5 +1006,11 @@
         "trendingCollections": "Bộ Sưu Tập Đang Hot",
         "recentlyAddedNFTs": "NFTs Vừa Được Thêm Gần Đây",
         "trendingCreators": "Người Tạo Nghệ Thuật Đang Hot"
+    },
+    "payment": {
+        "title": "Thanh Toán",
+        "viewOrder": "Xem Vé",
+        "titlests": "Thanh Toán Thành Công.",
+        "subtitle": "Thông tin Vé Xe sẽ được gửi đến Email của bạn.Cảm Ơn"
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
-import { Payments } from '@app/components/profile/profileCard/profileFormNav/nav/payments/Payments';
+import Payment from '@app/components/Travel/CheckOut/Payment';
 
 const PaymentHistoryPage: React.FC = () => {
   const { t } = useTranslation();
@@ -9,7 +9,7 @@ const PaymentHistoryPage: React.FC = () => {
   return (
     <>
       <PageTitle>{t('profile.nav.payments.title')}</PageTitle>
-      <Payments />
+      <Payment />
     </>
   );
 };
