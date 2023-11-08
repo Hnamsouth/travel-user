@@ -1,4 +1,3 @@
-// eslint-disable-next-line prettier/prettier
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
@@ -9,7 +8,7 @@ import { ViewAll } from "@app/components/nft-dashboard/common/ViewAll/ViewAll";
 import { NFTCardHeader } from "@app/components/nft-dashboard/common/NFTCardHeader/NFTCardHeader";
 import { TrendingCollection } from "@app/components/nft-dashboard/trending-collections/collection/TrendingCollection";
 import { useResponsive } from "@app/hooks/useResponsive";
-// import { getTrendingActivities, TrendingActivity } from '@app/api/activity.api';
+import { getTrendingActivities, TrendingActivity } from '@app/api/activity.api';
 import * as S from "./TrendingCollections.styles";
 import { GetRouteData, TravelRoute } from "@app/api/main/route.api";
 import { useMounted } from "@app/hooks/useMounted";
@@ -57,16 +56,14 @@ export const TrendingCollections: React.FC = () => {
             <Col>
               <ViewAll bordered={false} />
             </Col>
-
             <Col>
               <S.ArrowBtn type="text" size="small" onClick={() => sliderRef.current && sliderRef.current.slickPrev()}>
-                <LeftOutlined rev={undefined} />
+                <LeftOutlined />
               </S.ArrowBtn>
             </Col>
-
             <Col>
               <S.ArrowBtn type="text" size="small" onClick={() => sliderRef.current && sliderRef.current.slickNext()}>
-                <RightOutlined rev={undefined} />
+                <RightOutlined />
               </S.ArrowBtn>
             </Col>
           </Row>

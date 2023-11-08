@@ -92,9 +92,9 @@ const Home: React.FC = () => {
                 )}
             </Col >
 
-            <Col span={24}>
-                <TrendingCollections />
-            </Col>
+            {/*<Col span={24}>*/}
+            {/*    /!*<TrendingCollections />*!/*/}
+            {/*</Col>*/}
             <Col span={24}>
 
             </Col>

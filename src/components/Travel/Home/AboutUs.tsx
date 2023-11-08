@@ -11,20 +11,29 @@ const AboutUs: React.FC = () => {
   return (
     <Row gutter={[30, 30]}>
       <Col span={24}>
-        <Title level={1}>Travel</Title>
-        <Paragraph>Chất lượng là danh dự</Paragraph>
+        <Title level={1}>Travel Agency  </Title>
+        <Paragraph>Quality is honor</Paragraph>
         <Paragraph>
-          Tập đoàn Phương Trang – FUTA Group được thành lập năm 2001. Với hoạt động kinh doanh chính trong lĩnh vực mua
-          bán xe ô tô, vận tải hành khách, bất động sản và kinh doanh dịch vụ. Phương Trang dần trở thành cái tên quen
-          thuộc đồng hành cùng người Việt trên mọi lĩnh vực.
+          Travel Agency was established in 2001. The company mainly operates in the following fields:
+
+          Passenger transportation: Travel Agency  is one of the largest passenger transportation companies in Vietnam, operating over 2,000 passenger cars, serving millions of passengers each year.
+          Automobile trading: Travel Agency  is the official distributor of many world famous car brands, such as Mercedes-Benz, Toyota, Hyundai, etc.
+          Real estate: Travel Agency  invests in the development of many real estate projects, including residential areas, urban areas, and shopping centers.
+          Service business: Travel Agency  provides a variety of services, including express delivery services, tourism services, and restaurant services.
+          With the motto "Quality is honor", Travel Agency  always strives to provide the best services for customers. The company has won many prestigious awards, including the Golden Star of Vietnam Award, the National Brand Award, etc.
+
+          Travel Agency  has become a familiar name accompanying Vietnamese people in all fields. The company has contributed to promoting the socio-economic development of the country and improving the quality of life of the people.
+
+
         </Paragraph>
         <Paragraph>
-          Trải qua hơn 20 năm hình thành và phát triển đặt khách hàng là trọng tâm, chúng tôi tự hào trở thành doanh
-          nghiệp vận tải nòng cốt đóng góp tích cực vào sự phát triển chung của ngành vận tải nói riêng và nền kinh tế
-          đất nước nói chung. Luôn cải tiến mang đến chất lượng dịch vụ tối ưu nhất dành cho khách hàng, Công ty Phương
-          Trang được ghi nhận qua nhiều giải thưởng danh giá như “Thương hiệu số 1 Việt Nam, “Top 10 Thương hiệu nổi
-          tiếng Việt Nam”, “Top 10 Dịch vụ hoàn hảo vì quyền lợi người tiêu dùng năm 2022”, “Top 10 Doanh nghiệp tiêu
-          biểu Việt Nam”, “Top 10 thương hiệu, sản phẩm dịch vụ uy tín Việt Nam – ASEAN 2022” …
+          Over 20 years of formation and development with the focus on customers, we are proud to become a core transportation
+          enterprise that contributes positively to the overall development of the transportation industry in particular and the
+          national economy in general. Always improving to bring the optimal service quality for customers, Travel Agency
+          Company has been recognized through many prestigious awards such as "Vietnam's No. 1 Brand", "Top 10 Famous
+          Brands of Vietnam", "Top 10 Perfect Services for Consumer Rights in 2022", "Top 10 Vietnamese Representative
+          Enterprises", "Top 10 reputable brands, products and services of Vietnam - ASEAN 2022" ...
+
         </Paragraph>
       </Col>
       <Row>
@@ -39,11 +48,12 @@ const AboutUs: React.FC = () => {
         </Col>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA BUS LINES</Title>
+            <Title level={5}>TRAVEL BUS LINES</Title>
             <Paragraph>
-              Tuân thủ phương châm “Chất lượng là danh dự” Công Ty Cổ Phần Xe Khách Phương Trang – FUTA Bus Lines hiện
-              đang khai thác hơn 60 tuyến vận tải hành khách liên tỉnh cố định trải dài từ Nam ra Bắc với 350 phòng vé
-              và trạm trung chuyển, hơn 2.000 đầu xe các loại, phục vụ hơn 20 triệu lượt khách mỗi năm.
+              Adhering to the motto "Quality is honor", Travel Agency Joint Stock Company - TRAVEL Bus Lines is currently
+              operating over 60 fixed inter-provincial passenger transport routes stretching from South to North with 350 ticket offices
+              and transfer stations, over 2,000 vehicles of all types, serving over 20 million passengers each year.
+
             </Paragraph>
           </div>
         </Col>
@@ -51,11 +61,10 @@ const AboutUs: React.FC = () => {
       <Row>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA LAND</Title>
+            <Title level={5}>TRAVEL LAND</Title>
             <Paragraph>
-              Đối với mảng bất động sản, Phương Trang đã đạt những thành tựu nhất định với các sản phẩm chất lượng cao
-              như Đà Nẵng Times Square, khu căn hộ cao cấp tại quận Sơn Trà, quận Liên Chiểu và nhiều dự án đang dần
-              hoàn thiện khác.
+              In the real estate sector, Travel Agency has achieved certain successes with high-quality products such as Đà Nẵng Times Square, a luxury apartment complex in Sơn Trà district, Liên Chiểu district, and many other projects that are being gradually completed.
+
             </Paragraph>
           </div>
         </Col>
@@ -82,14 +91,10 @@ const AboutUs: React.FC = () => {
         </Col>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA EXPRESS</Title>
+            <Title level={5}>TRAVEL EXPRESS</Title>
             <Paragraph>
-              Song hành cùng sự phát triển của xe khách Phương Trang, chúng tôi nhận thấy một nhu cầu tất yếu là vận tải
-              hàng hóa đi kèm với hành khách và hàng hóa không đi kèm với khách. Đáp ứng nhu cầu cũng như sự tin tưởng
-              của khách hàng dành cho Công ty Phương Trang, Công ty Cổ phần Dịch vụ Chuyển Phát Nhanh Phương Trang –
-              FUTA Express được thành lập. Qua một thập kỷ phát triển, FUTA Express dần trở thành đơn vị vận chuyển hàng
-              hóa và phát triển kinh doanh. FUTA Express đã và đang đầu tư thêm nhiều phòng giao dịch, phương tiện và
-              dịch vụ vận chuyển riêng biệt bảo đảm phục vụ khách hàng một cách nhanh chóng và an toàn.
+              In parallel with the development of Travel Agency  buses, we have recognized an essential need for the transportation of goods accompanied by passengers and goods not accompanied by passengers. To meet the needs and trust of customers for Travel Agency , Travel Agency  Express Joint Stock Company - TRAVEL Express was established. After a decade of development, TRAVEL Express has gradually become a leading logistics and business development unit. TRAVEL Express has been and is investing in more transaction offices, vehicles, and dedicated transportation services to ensure that customers are served quickly and safely.
+
             </Paragraph>
           </div>
         </Col>
@@ -97,17 +102,11 @@ const AboutUs: React.FC = () => {
       <Row>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA CITY BUS </Title>
+            <Title level={5}>TRAVEL CITY BUS </Title>
             <Paragraph>
-              Mảng vận tải hành khách công cộng FUTA City Bus là mảnh ghép quan trọng trong chuỗi hoạt động chính mà
-              Công ty Phương Trang hướng đến. Đầu tư vào những xe đời mới chất lượng cao, xe buýt Phương Trang mang đến
-              cho hành khách đầy đủ tiện nghi như máy lạnh, wifi cùng đội ngũ lái xe, nhân viên chuyên nghiệp. Xe buýt
-              Phương Trang cam kết mang đến cho khách hàng những chuyến đi an toàn, thoải mái với mức giá phù hợp, những
-              chuyến đi “Chất lượng là danh dự.” Hiện nay, xe buýt Phương Trang đã có mặt tại 07 tỉnh thành: Đồng Tháp,
-              Lâm Đồng, Thừa Thiên Huế, Khánh Hòa, Cần Thơ, An Giang và Ninh Thuận. Tiếp theo năm 2023, Công ty sẽ đưa
-              vào khai thác chính thức các tuyến xe buýt mới trên địa bàn các tỉnh thành: Thành phố Hồ Chí Minh, Vĩnh
-              Long, Đồng Nai, Tiền Giang, Bạc Liêu, Bến Tre, Kiên Giang…đáp ứng tối đa nhu cầu đi lại của người dân,
-              giảm phương tiện cá nhân, góp phần thay đổi bộ mặt giao thông theo hướng hiện đại và tinh giản hơn.
+              In line with the growth of Travel Agency buses, we have identified an essential need for the transportation of goods accompanying passengers and goods not accompanying passengers. In response to the needs and trust of customers for Travel Agency , Travel Agency Express Joint Stock Company - FUTA Express was established. Over a decade of development, TRAVEL Express has gradually become a leading logistics and business development unit. TRAVEL Express has been and is investing in more transaction offices, vehicles, and dedicated transportation services to ensure that customers are served quickly and safely.
+              Travel Agency buses have grown in popularity, and with this growth has come a need for the transportation of goods. To meet this need, Travel Agency Express Joint Stock Company - TRAVEL Express was established. Over a decade of development, TRAVEL Express has become a leading logistics and business development unit. TRAVEL Express has invested in more transaction offices, vehicles, and dedicated transportation services to ensure that customers are served quickly and safely.
+
             </Paragraph>
           </div>
         </Col>
@@ -134,9 +133,10 @@ const AboutUs: React.FC = () => {
         </Col>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA ADVERTISING</Title>
+            <Title level={5}>TRAVEL ADVERTISING</Title>
             <Paragraph>
-              Bên cạnh đó, chúng tôi còn đầu tư vào lĩnh vực truyền thông, quảng cáo với việc thành lập Công ty Cổ phần Quảng Cáo FUTA Việt Nam – FUTA Ads, là đơn vị khai thác quảng cáo trên toàn bộ hệ sinh thái của Tập Đoàn Phương Trang – FUTA Group với đa dạng hình thức quảng cáo như Quảng cáo xe tuyến đường dài, Quảng cáo vận chuyển hàng, Quảng cáo xe taxi, gian hàng bán hàng… Trong xu hướng 4.0 hiện nay, chúng tôi cũng đang ứng dụng và phát triển những công nghệ quảng cáo kỹ thuật số (Digital Marketing) với mục tiêu mang đến giải pháp tiếp thị toàn diện hiệu quả cho doanh nghiệp.
+              In addition, we have also invested in the field of media and advertising with the establishment of TRAVEL Vietnam Advertising Joint Stock Company - TRAVEL Ads, which is the advertising exploitation unit on the entire ecosystem of Travel Agency  Group - TRAVEL Group with a variety of advertising formats such as long-distance bus advertising, cargo advertising, taxi advertising, sales stalls, etc. In the current 4.0 trend, we are also applying and developing digital marketing technologies (Digital Marketing) with the aim of providing effective comprehensive marketing solutions for businesses.
+
             </Paragraph>
           </div>
         </Col>
@@ -144,9 +144,12 @@ const AboutUs: React.FC = () => {
       <Row>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA BUS LINES</Title>
-            <Paragraph>Hiểu được nhu cầu nghỉ ngơi, thư giãn của hành Khách trên các hành trình dài qua nhiều tỉnh, thành phố, Công ty Phương Trang còn đầu tư vào hệ thống trạm dừng Phúc Lộc tại các khu vực trọng điểm như Tiền Giang, Lâm Đồng, Bến Tre, Vĩnh Long, Sóc Trăng… Hệ thống Trạm dừng Phúc Lộc được đầu tư toàn diện, đảm bảo phục vụ lượng lớn khách hàng 24/7.
-              Các Trạm dừng Phúc Lộc mang đến nhiều món ăn hấp dẫn, phong phú, phù hợp với khẩu vị đa dạng của hành khách. Bên trong trạm dừng còn có các gian hàng đặc sản như trái cây theo mùa hoặc các loại bánh kẹo đặc trưng của từng vùng miền, nơi khách hàng có thể thưởng thức tại chỗ hoặc mua về làm quà cho người thân. Những nỗ lực này nhằm mang đến chuyến đi thoải mái và thư giãn cùng trải nghiệm dịch vụ tối ưu dành cho Khách hàng Phương Trang nói riêng và tất cả hành Khách nói chung.
+            <Title level={5}>TRAVEL BUS LINES</Title>
+            <Paragraph>
+              Understanding the need for rest and relaxation of passengers on long journeys through many provinces and cities, Travel Agency  also invested in the Phúc Lộc rest stop system in key areas such as Tiền Giang, Lâm Đồng, Bến Tre, Vĩnh Long, Sóc Trăng, etc. The Phúc Lộc rest stop system is fully invested to ensure serving a large number of customers 24/7.
+
+              The Phúc Lộc rest stops offer a variety of delicious and diverse dishes to suit the diverse tastes of passengers. Inside the rest stop, there are also specialty stalls such as seasonal fruits or traditional candy from each region, where customers can enjoy on the spot or buy as gifts for loved ones. These efforts aim to provide a comfortable and relaxing trip and an optimal service experience for Travel Agency  customers in particular and all passengers in general.
+
             </Paragraph>
           </div>
         </Col>
@@ -172,11 +175,10 @@ const AboutUs: React.FC = () => {
         </Col>
         <Col className="gutter-row" style={style} span={12}>
           <div>
-            <Title level={5}>FUTA APPLICATION</Title>
+            <Title level={5}>TRAVEL APPLICATION</Title>
             <Paragraph>
-              Cùng với việc đầu tư phát triển, mở rộng mạng lưới, tuyến mới và đầu từ những dòng xe chất lượng cao, chúng tôi còn tập trung công nghệ tiên tiến vào hoạt động kinh doanh. Khách hàng hiện có thể dễ dàng mua vé, gọi xe chỉ với vài thao tác đơn giản trên ứng dụng FUTA (FUTA app) cũng như tận hưởng các chương trình ưu đãi thanh toán của các đối tác trong từng thời điểm.
-              Sử dụng FUTA app cho nhu cầu mua vé du lịch, đi lại, vận chuyển, Khách hàng còn có cơ hội tích luỹ điểm sau chuyến đi: Đổi điểm để mua vé xe Phương Trang và giao hàng hoá đi tỉnh, miễn phí, giảm giá… khi đặt xe di chuyển từ bến/bãi Phương Trang về nhà và ngược lại, đặt xe giá rẻ di chuyển trong thành phố...Hãy trải nghiệm FUTA app ngay – chúng tôi hân hạnh được lắng nghe và phục vụ Quý Khách.
-            </Paragraph>
+              Along with investing in development, network expansion, new routes and investing in high-quality vehicle lines, we also focus on advanced technology in business activities. Customers can now easily buy tickets and hail a ride with just a few simple steps on the TRAVEL app (TRAVEL app) as well as enjoy payment incentives from partners from time to time.
+              Using the TRAVEL app to buy travel, transportation, and transportation tickets, customers also have the opportunity to accumulate points after the trip: Exchange points to buy Travel Agency bus tickets and deliver goods to the province, free of charge, with discounts. Price... when booking a car to travel from Travel Agency station/park to home and vice versa, booking a cheap car to move within the city... Experience the TRAVEL app now - we are honored to listen and serve you .  </Paragraph>
           </div>
         </Col>
       </Row>
