@@ -130,6 +130,7 @@
         "unchecked": "Unchecked"
     },
     "common": {
+        "buyticket":"Buy Ticket",
         "address": "Address",
         "advancedForms": "Advanced Forms",
         "age": "Age",
@@ -174,7 +175,7 @@
         "emailError": "Please input users name or delete this field",
         "notValidEmail": "Please input a valid email address!",
         "error": "Error",
-        "feed": "Feed",
+        "feed": "Home",
         "firstName": "First Name",
         "forgotPass": "Forgot Password",
         "forgotPasswordPage": "Forgot password page",
