@@ -143,6 +143,11 @@
         "unchecked": "Unchecked"
     },
     "common": {
+        "home":"Home",
+        "vehicle": "Vehicle",
+        "schedule":"Schedule",
+        "findticket":"Find Ticket",
+        "yourprofile":"Your Profile",
         "address": "Address",
         "advancedForms": "Advanced Forms",
         "age": "Age",
