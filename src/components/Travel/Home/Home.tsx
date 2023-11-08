@@ -8,12 +8,12 @@ import { BusStructure, BusStructureData } from '@app/api/main/bus.api';
 import { PriceForAge, TKDTdata, TKdata, getPriceForAgeData } from '@app/api/main/ticket.api';
 import SearchSchedule from './SearchSchedule';
 import BusScheduleList from './BusScheduleList';
-import { TrendingCollections } from '@app/components/nft-dashboard/trending-collections/TrendingCollections';
+// import { TrendingCollections } from '@app/components/nft-dashboard/trending-collections/TrendingCollections';
 import FilterTravelRoute from './Filter';
 import FooterComponent from './Footer';
 import { useResponsive } from '@app/hooks/useResponsive';
 export interface FormData {
-    BusScheduleList: BusSchedule[],
+    BusScheduleList: BusSchedule[], 
     LocationList: Location[],
     Routes: Route[],
     loading: boolean,
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
             </Col >
 
             <Col span={24}>
-                <TrendingCollections />
+                {/* <TrendingCollections /> */}
             </Col>
             <Col span={24}>
 

@@ -22,7 +22,7 @@ const BusScheduleList: React.FC<IScheduleList> = React.memo(({ BigData, setBigDa
     // select travel route
     const SelectTraverRoute = async (data: TravelRoute) => {
         await GetBusStructureData( data.id).then((res) => {
-            setBigData({ ...BigData, BusStructureData: res, TravelRouteSelected: data })
+            setBigData({ ...BigData, BusStructureData: res, TravelRouteSelected: data,fieldTKDT:[] })
         });
         message.success("Selected")
     }
@@ -36,7 +36,7 @@ const BusScheduleList: React.FC<IScheduleList> = React.memo(({ BigData, setBigDa
                 <Row gutter={[20, 20]}>
                     {/* render  Travel Route */}
                     {BigData.TravelRouteData.map((e, i) => {
-                        const price = e.idRouteNavigation?.price as number + (e.idRouteNavigation?.price as number * (e.idBusScheduleNavigation?.idBusNavigation?.idTypeBusNavigation?.pricePlus as number) / 100)
+                        const price = e.idRouteNavigation?.price as number + (e.idBusScheduleNavigation?.idBusNavigation?.idTypeBusNavigation?.pricePlus as number);
                         const time = e.idRouteNavigation?.time as number;
                         const timeRender = ((time % 60) === 0 ? (time / 60) + "h" : (time / 60) > 0 ? Math.floor(time / 60) + "h" + (time % 60) + "m" : time + "m");
                         const timeObject = parse(e.timeStart, 'HH:mm:ss', new Date());
@@ -56,7 +56,7 @@ const BusScheduleList: React.FC<IScheduleList> = React.memo(({ BigData, setBigDa
                                                     <Button type='text'>Adult Ticket: {price} $ </Button>
                                                 </Col>
                                                 <Col span={16}>
-                                                    <h3>15/30 Seats Purchased</h3>
+                                                    <h3>{e.tickets.length}/{e.idBusScheduleNavigation?.idBusNavigation?.idTypeBusNavigation?.busStructures[0].numberOfSeat} Seats Purchased</h3>
                                                 </Col>
                                                 <Col span={24}>
                                                     <Row>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Form, Modal, Row, message } from 'antd';
+import { Card, Col, Form, Modal, Row, message } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { BusStructureData } from '@app/api/main/bus.api';
 import { Button } from '@app/components/common/buttons/Button/Button';
@@ -28,13 +28,13 @@ export const SeatStructureFormModal: React.FC<SeatStructureFormModal> = React.me
         let letter = 'A';
         const setSeat = (seat: string) => {
             let oldSeat = [...seatSelected];
-                let index = oldSeat.indexOf(seat);
-                if (index > -1) {
-                    seatBooked !== "" ? message.warning("Please choose other Seat.") : oldSeat.splice(index, 1)
-                } else {
-                    seatBooked !== "" ? oldSeat.splice(0, 1, seat) : oldSeat.push(seat)
-                }
-                setSeatSelected(oldSeat)
+            let index = oldSeat.indexOf(seat);
+            if (index > -1) {
+                seatBooked !== "" ? message.warning("Please choose other Seat.") : oldSeat.splice(index, 1)
+            } else {
+                seatBooked !== "" ? oldSeat.splice(0, 1, seat) : oldSeat.push(seat)
+            }
+            setSeatSelected(oldSeat)
         }
         // seat stt, bus stt, tb-ts
         const onOk = () => {
@@ -52,46 +52,57 @@ export const SeatStructureFormModal: React.FC<SeatStructureFormModal> = React.me
             return () => { };
         }, [seatBooked])
         return (
-            <Modal title={t('forms.bus.newTypeSeat')} visible={visible} onOk={onOk} onCancel={onCancel}>
-                <Card>
-                    <Form form={formAddTKDT} layout="vertical" name='selectSeat'>
-                        <Form.Item
-                            name="seat"
-                            label={"Pick Seat"}
-                            rules={[{ required: true, message: t('common.requiredField') }]}
-                        >
-                            {BusStructureData.busStructure != null &&
-                                setArray(BusStructureData.busStructure.row).map((r, i) => {
-                                    return (
-                                        <Row key={i} gutter={[0, 8]} justify='center'>
-                                            {
-                                                setArray(BusStructureData.busStructure.col).map((c, j) => {
-                                                    let checkSpace = BusStructureData.busStructure.seatStructures.filter(e => e.rowIndex === r && e.colIndex === c).length > 0;
-                                                    let k = ((BusStructureData.busStructure.col * i) + j);
-                                                    let nameSeat = i > 0 ?
-                                                        (String.fromCharCode(letter.charCodeAt(0) + j) + (k < 10 ? "0" + k : k)) :
-                                                        (letter + (j < 10 ? "0" + j : j));
-                                                    let checkSeatSelected = seatSelected.includes(nameSeat);
-                                                    let checkSeatSold = BusStructureData.seat.filter(c => c.seat === nameSeat && c.status === 1).length > 0;
-                                                    let checkWaiting = BusStructureData.seat.filter(c => c.seat === nameSeat && c.status === 0 && c.seat !==seatBooked).length > 0;
-                                                    return (
-                                                        <Button key={(BusStructureData.busStructure.col * i) + j}
-                                                            disabled={checkSpace || checkSeatSold || (checkWaiting && !checkSeatSelected)}
-                                                            onClick={() => setSeat(nameSeat)}
-                                                            style={{ "marginRight": 10 + 'px', "marginBottom": 10 + 'px', opacity: checkSpace ? 0 : 1, border: "none", background: "none" }}
-                                                            icon={<SeatIcon type={checkSeatSold ? "disable" : checkSeatSelected ? "selected" : checkWaiting?"waiting": "default"} />}
-                                                        >
-                                                        </Button>
-                                                    )
-                                                })
-                                            }
-                                        </Row>
-                                    );
-                                })
-                            }
-                        </Form.Item>
-                    </Form>
-                </Card>
+            <Modal title={t('page.home.searchSchedule.chooseSeat.title')} visible={visible} onOk={onOk} onCancel={onCancel} width={820}>
+                <Row gutter={[20, 20]}>
+                    <Col xl={6}>
+                        <Row style={{flexDirection:"column"}}>
+                            <Button type='text' style={{justifyContent:"flex-start"}}><SeatIcon type="disable"/> {t("page.home.searchSchedule.chooseSeat.typeSeat.disable")} </Button>
+                            <Button type='text' style={{justifyContent:"flex-start"}}><SeatIcon type="selected"/> {t("page.home.searchSchedule.chooseSeat.typeSeat.selected")} </Button>
+                            <Button type='text' style={{justifyContent:"flex-start"}}><SeatIcon type="waiting"/> {t("page.home.searchSchedule.chooseSeat.typeSeat.waiting")} </Button>
+                            <Button type='text' style={{justifyContent:"flex-start"}}><SeatIcon type="default"/> {t("page.home.searchSchedule.chooseSeat.typeSeat.default")} </Button>
+                        </Row>
+                    </Col>
+                    <Col xl={18}>
+                        <Card>
+                            <Form form={formAddTKDT} layout="vertical" name='selectSeat'>
+                                <Form.Item
+                                    name="seat"
+                                    rules={[{ required: true, message: t('common.requiredField') }]}
+                                >
+                                    {BusStructureData.busStructure != null &&
+                                        setArray(BusStructureData.busStructure.row).map((r, i) => {
+                                            return (
+                                                <Row key={i} gutter={[0, 8]} justify='center'>
+                                                    {
+                                                        setArray(BusStructureData.busStructure.col).map((c, j) => {
+                                                            let checkSpace = BusStructureData.busStructure.seatStructures.filter(e => e.rowIndex === r && e.colIndex === c).length > 0;
+                                                            let k = ((BusStructureData.busStructure.col * i) + j);
+                                                            let nameSeat = i > 0 ?
+                                                                (String.fromCharCode(letter.charCodeAt(0) + j) + (k < 10 ? "0" + k : k)) :
+                                                                (letter + (j < 10 ? "0" + j : j));
+                                                            let checkSeatSelected = seatSelected.includes(nameSeat);
+                                                            let checkSeatSold = BusStructureData.seat.filter(c => c.seat === nameSeat && c.status === 1).length > 0;
+                                                            let checkWaiting = BusStructureData.seat.filter(c => c.seat === nameSeat && c.status === 0 && c.seat !== seatBooked).length > 0;
+                                                            return (
+                                                                <Button key={(BusStructureData.busStructure.col * i) + j}
+                                                                    disabled={checkSpace || checkSeatSold || (checkWaiting && !checkSeatSelected)}
+                                                                    onClick={() => setSeat(nameSeat)}
+                                                                    style={{ "marginRight": 10 + 'px', "marginBottom": 10 + 'px', opacity: checkSpace ? 0 : 1, border: "none", background: "none" }}
+                                                                    icon={<SeatIcon type={checkSeatSold ? "disable" : checkSeatSelected ? "selected" : checkWaiting ? "waiting" : "default"} />}
+                                                                >
+                                                                </Button>
+                                                            )
+                                                        })
+                                                    }
+                                                </Row>
+                                            );
+                                        })
+                                    }
+                                </Form.Item>
+                            </Form>
+                        </Card>
+                    </Col>
+                </Row>
             </Modal>
         );
     }

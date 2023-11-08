@@ -9,8 +9,10 @@ import { useTranslation } from "react-i18next";
 import { Spinner } from "@app/components/common/Spinner/Spinner.styles";
 import { SearchTravelRoute } from "@app/api/main/route.api";
 import dayjs from "dayjs";
+import moment from 'moment';
+import DatePicker, { RangePickerProps } from "antd/lib/date-picker";
 
-
+const { RangePicker } = DatePicker;
 interface SearchData {
     BigData: IBigData,
     setBigData: React.Dispatch<React.SetStateAction<IBigData>>,
@@ -32,12 +34,21 @@ const SearchSchedule: React.FC<SearchData> = React.memo(({ BigData, setBigData, 
     const setRangeDate = () => {
         setIsReturnDate(true)
     }
+    const disabledDate: RangePickerProps['disabledDate'] = current => {
+        // Can not select days before today and today
+        return current && current < moment().startOf('day');
+      };
+
+    
     const CheckBusSchedule = async () => {
         let formData = await form.validateFields();
         formData.date = formData.date.length ? formData.date.map((e: string | number | Date | dayjs.Dayjs | null | undefined) => dayjs(e).day()) : [dayjs(formData.date).day()];
         const travelRouteData = await SearchTravelRoute(formData);
         if (travelRouteData) {
+            console.log(travelRouteData);
             setBigData({ ...BigData, TravelRouteData: travelRouteData });
+        }else{
+            message.info(`The schedule could not be found`)
         }
     }
 
@@ -82,7 +93,7 @@ const SearchSchedule: React.FC<SearchData> = React.memo(({ BigData, setBigData, 
                                 <Row gutter={[20,20]}>
                                     <Col span={20} >
                                         <Form.Item name="date">
-                                            <DayjsDatePicker.RangePicker/>
+                                            <RangePicker disabledDate={disabledDate}/>
                                         </Form.Item>
                                     </Col>
                                     <Col span={2}>
@@ -95,7 +106,7 @@ const SearchSchedule: React.FC<SearchData> = React.memo(({ BigData, setBigData, 
                         ) : (
                             <Col xl={6} md={12} xs={24}>
                                 <Form.Item name="date" rules={[{ required: true, message: "Please Choose Departure Date" }]}>
-                                    <DayjsDatePicker placeholder={t("page.home.searchSchedule.departureDate")}  style={{width:"100%"}}/>
+                                    <DatePicker disabledDate={disabledDate} placeholder={t("page.home.searchSchedule.departureDate")}  style={{width:"100%"}}/>
                                 </Form.Item>
                             </Col>
                         )

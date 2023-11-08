@@ -30,13 +30,26 @@
                 "to":"Destination",
                 "departureDate":"Departure Date",
                 "returnDate":"Add Return Date",
-                "search":"Search"
+                "search":"Search",
+                "chooseSeat":{
+                    "title":"Choose Seat",
+                    "typeSeat":{
+                        "disable":"Not availble",
+                        "selected":"Selected",
+                        "default":"Available",
+                        "waiting":"Waiting"
+                    }
+                }
             },
             "popularRoute":{
                 "title":"Popular bus routes"
             },
             "tooltip":{
                 "removeReturnDate":"Remove Return Date"
+            },
+            "addTicket":{
+                "purchaserInfo":"Purchaser Infomation",
+                "holderInfo":"Ticket Holder Info"
             }
         }
     },

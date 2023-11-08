@@ -35,12 +35,14 @@ export interface TypeBus {
   "pricePlus": number,
   "img": string,
   "publicId": string,
+  "busStructures":BusStructure[]|[],
 }
 
 export interface BusStructure {
   "id": number,
   "row": number,
   "col": number,
+  "numberOfSeat":number,
   "idTypeBus": number,
   "idTypeBusNavigation": TypeBus | null,
   "seatStructures": SeatStructure[] | []

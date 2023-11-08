@@ -11,6 +11,7 @@ import { setTicketInfo } from "@app/store/slices/ticketSlice";
 import { useNavigate } from "react-router-dom";
 import { PusherSV } from "@app/services/pusher.service";
 import { GetBusStructureData } from "@app/api/main/bus.api";
+import { useTranslation } from "react-i18next";
 
 interface IAddTicket {
     BigData: IBigData,
@@ -23,11 +24,10 @@ const AddTickets: React.FC<IAddTicket> = React.memo(({ BigData, setBigData, Pric
     const user = useAppSelector((state) => state.user);
     const [visible, setVisible] = useState(false);
     const [formAddTicket] = Form.useForm();
+    const {t} = useTranslation();
 
     const navigate = useNavigate();
-    const dispatch = useAppDispatch();
     const hideFormModal = () => setVisible(false);
-
     const AddTicket = async () => {
         await formAddTicket.validateFields();
         if (BigData.TicketDetailData.length > 0) {
@@ -81,25 +81,15 @@ const AddTickets: React.FC<IAddTicket> = React.memo(({ BigData, setBigData, Pric
         oldTKDT.splice(index, 1);
         setBigData({ ...BigData, TicketDetailData: oldTKDT, fieldTKDT: oldFields });
     }
-
     const ticketPrice = useCallback((e: TKDTdata) => {
         let p = BigData.TravelRouteSelected.idRouteNavigation?.price as number + (BigData.BusStructureData.busStructure.idTypeBusNavigation?.pricePlus as number);
         let p2 = PriceForAge.find(a => a.ageFrom <= (e.ownerAge as number) && a.ageTo >= (e.ownerAge as number))?.percentPrice as number;
         return p + (p * p2 / 100);
     }, []);
-
-    const onFinish = (value: any) => {
-        console.log(value)
-    }
-
-
-
-
     const SeatChanged = async () => {
         const p = PusherSV();
         const channel = p.subscribe("tickets");
         channel.bind(`seat-update`, async (rs: { IdTravelRoute: number, idTypeBus: number } ) => {
-            console.log(rs)
             await GetBusStructureData(rs.IdTravelRoute).then((res)=>{
                 setBigData({ ...BigData, BusStructureData: res })
             })
@@ -140,10 +130,9 @@ const AddTickets: React.FC<IAddTicket> = React.memo(({ BigData, setBigData, Pric
             >
                 <Form
                     name="addTKDT"
-                    onFinish={onFinish}
                     form={formAddTicket}
                 >
-                    <h3>Add Ticket Holder Info</h3>
+                    <h3>{t("page.home.addTicket.purchaserInfo")}</h3>
                     <Row gutter={[30, 30]}>
                         <Col span={8}>
                             <Form.Item
@@ -176,7 +165,7 @@ const AddTickets: React.FC<IAddTicket> = React.memo(({ BigData, setBigData, Pric
                     >
                         {(fields, { add, remove }) => (
                             <>
-                                <h3>Add Ticket</h3>
+                                {BigData.fieldTKDT.length>0 && (<h3>{t("page.home.addTicket.holderInfo")}</h3>)}
                                 {BigData.fieldTKDT.map(({ key, name, ...restField }, i) =>
                                     <Row key={key} gutter={[30, 30]} align="middle" justify="space-between">
                                         <Col span={6}>
@@ -188,7 +177,6 @@ const AddTickets: React.FC<IAddTicket> = React.memo(({ BigData, setBigData, Pric
                                                 <Input placeholder="Name" />
                                             </Form.Item>
                                         </Col>
-
                                         <Col span={6}>
                                             <Form.Item
                                                 {...restField}
@@ -198,7 +186,6 @@ const AddTickets: React.FC<IAddTicket> = React.memo(({ BigData, setBigData, Pric
                                                 <InputNumber placeholder="age" style={{ width: "100%" }} />
                                             </Form.Item>
                                         </Col>
-
                                         <Col span={6}>
                                             <Form.Item
                                                 {...restField}

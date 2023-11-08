@@ -30,13 +30,26 @@
                 "to":"Nơi đến",
                 "departureDate":"Ngày đi",
                 "returnDate":"Thêm ngày về",
-                "search":"Tìm kiếm"
+                "search":"Tìm kiếm",
+                "chooseSeat":{
+                    "title":"Chọn Ghế",
+                    "typeSeat":{
+                        "disable":"Ghế không bán",
+                        "selected":"Đang chọn",
+                        "default":"Ghế trống",
+                        "waiting":"Đang chờ thanh toán"
+                    }
+                }
             },
             "popularRoute":{
                 "title":"Các tuyến đường Phổ Biến"
             },
             "tooltip": {
                 "removeReturnDate": "Bỏ Ngày Về"
+            },
+            "addTicket":{
+                "purchaserInfo":"Thông tin người mua",
+                "holderInfo":"Thông tin người giũ vé"
             }
         }
     },
